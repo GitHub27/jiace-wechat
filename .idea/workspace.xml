@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75a62739-d9e5-4610-aefc-10b3e5ca872b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vscode/.sftpConfig.json" afterPath="$PROJECT_DIR$/.vscode/.sftpConfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MP_verify_O3viPzmtqRCTk7vz.txt" afterPath="$PROJECT_DIR$/MP_verify_O3viPzmtqRCTk7vz.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/courses/courses.js" afterPath="$PROJECT_DIR$/components/vendor/courses/courses.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/home/home.js" afterPath="$PROJECT_DIR$/components/vendor/home/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/login/login.js" afterPath="$PROJECT_DIR$/components/vendor/login/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/mine/messageCenter.js" afterPath="$PROJECT_DIR$/components/vendor/mine/messageCenter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/mine/mine.js" afterPath="$PROJECT_DIR$/components/vendor/mine/mine.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/mine/myInfo.js" afterPath="$PROJECT_DIR$/components/vendor/mine/myInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/mine/redPackets.js" afterPath="$PROJECT_DIR$/components/vendor/mine/redPackets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/myCertificate/myCertificate.js" afterPath="$PROJECT_DIR$/components/vendor/myCertificate/myCertificate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/question/answerDetails.js" afterPath="$PROJECT_DIR$/components/vendor/question/answerDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/question/answerSheets.js" afterPath="$PROJECT_DIR$/components/vendor/question/answerSheets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/question/exercises.js" afterPath="$PROJECT_DIR$/components/vendor/question/exercises.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/question/questions.js" afterPath="$PROJECT_DIR$/components/vendor/question/questions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/question/scores.js" afterPath="$PROJECT_DIR$/components/vendor/question/scores.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/register/register.js" afterPath="$PROJECT_DIR$/components/vendor/register/register.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/studyList/studyList.js" afterPath="$PROJECT_DIR$/components/vendor/studyList/studyList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/train/trainSchool.js" afterPath="$PROJECT_DIR$/components/vendor/train/trainSchool.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/trainRecord/trainRecord.js" afterPath="$PROJECT_DIR$/components/vendor/trainRecord/trainRecord.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/utils/common.js" afterPath="$PROJECT_DIR$/components/vendor/utils/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/utils/config.js" afterPath="$PROJECT_DIR$/components/vendor/utils/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/utils/map.js" afterPath="$PROJECT_DIR$/components/vendor/utils/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/utils/mapping.js" afterPath="$PROJECT_DIR$/components/vendor/utils/mapping.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/utils/popup.js" afterPath="$PROJECT_DIR$/components/vendor/utils/popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/utils/share_wachet.js" afterPath="$PROJECT_DIR$/components/vendor/utils/share_wachet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/vendor/utils/video.js" afterPath="$PROJECT_DIR$/components/vendor/utils/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/version/interpolate-filter.js" afterPath="$PROJECT_DIR$/components/version/interpolate-filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/version/interpolate-filter_test.js" afterPath="$PROJECT_DIR$/components/version/interpolate-filter_test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/version/version-directive.js" afterPath="$PROJECT_DIR$/components/version/version-directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/version/version-directive_test.js" afterPath="$PROJECT_DIR$/components/version/version-directive_test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/version/version.js" afterPath="$PROJECT_DIR$/components/version/version.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/version/version_test.js" afterPath="$PROJECT_DIR$/components/version/version_test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/agreement.css" afterPath="$PROJECT_DIR$/css/agreement.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/agreement.less" afterPath="$PROJECT_DIR$/css/agreement.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/global.css" afterPath="$PROJECT_DIR$/css/global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/job.css" afterPath="$PROJECT_DIR$/css/job.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jobDetails.css" afterPath="$PROJECT_DIR$/css/jobDetails.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jquery.mytoast.css" afterPath="$PROJECT_DIR$/css/jquery.mytoast.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jquery.toast.css" afterPath="$PROJECT_DIR$/css/jquery.toast.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/messageCenter.css" afterPath="$PROJECT_DIR$/css/messageCenter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mine.css" afterPath="$PROJECT_DIR$/css/mine.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mine.less" afterPath="$PROJECT_DIR$/css/mine.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/myInformation.css" afterPath="$PROJECT_DIR$/css/myInformation.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/popup.css" afterPath="$PROJECT_DIR$/css/popup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pushMessage.css" afterPath="$PROJECT_DIR$/css/pushMessage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/redPackets.css" afterPath="$PROJECT_DIR$/css/redPackets.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/redPackets.less" afterPath="$PROJECT_DIR$/css/redPackets.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/register.css" afterPath="$PROJECT_DIR$/css/register.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/register.less" afterPath="$PROJECT_DIR$/css/register.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/reset.css" afterPath="$PROJECT_DIR$/css/reset.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/school.css" afterPath="$PROJECT_DIR$/css/school.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/schoolShare.css" afterPath="$PROJECT_DIR$/css/schoolShare.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/sm.min.css" afterPath="$PROJECT_DIR$/css/sm.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/studyList.css" afterPath="$PROJECT_DIR$/css/studyList.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.less" afterPath="$PROJECT_DIR$/css/style.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/trainRecord.css" afterPath="$PROJECT_DIR$/css/trainRecord.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/trainRecord.less" afterPath="$PROJECT_DIR$/css/trainRecord.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jq.extend.js" afterPath="$PROJECT_DIR$/js/jq.extend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-1.12.4.min.js" afterPath="$PROJECT_DIR$/js/jquery-1.12.4.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-3.0.0.min.js" afterPath="$PROJECT_DIR$/js/jquery-3.0.0.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-3.1.1.min.js" afterPath="$PROJECT_DIR$/js/jquery-3.1.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.myToast.js" afterPath="$PROJECT_DIR$/js/jquery.myToast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/agreement.html" afterPath="$PROJECT_DIR$/pages/agreement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/answerDetails.html" afterPath="$PROJECT_DIR$/pages/answerDetails.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/answerSheets.html" afterPath="$PROJECT_DIR$/pages/answerSheets.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/courses.html" afterPath="$PROJECT_DIR$/pages/courses.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/exercises.html" afterPath="$PROJECT_DIR$/pages/exercises.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/home.html" afterPath="$PROJECT_DIR$/pages/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/infoComplete.html" afterPath="$PROJECT_DIR$/pages/infoComplete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/job.html" afterPath="$PROJECT_DIR$/pages/job.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/jobDetails.html" afterPath="$PROJECT_DIR$/pages/jobDetails.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/messageCenter.html" afterPath="$PROJECT_DIR$/pages/messageCenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/mine.html" afterPath="$PROJECT_DIR$/pages/mine.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/myCertificate.html" afterPath="$PROJECT_DIR$/pages/myCertificate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/myInformation.html" afterPath="$PROJECT_DIR$/pages/myInformation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/pushMessage.html" afterPath="$PROJECT_DIR$/pages/pushMessage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/questions.html" afterPath="$PROJECT_DIR$/pages/questions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/questionsTips.html" afterPath="$PROJECT_DIR$/pages/questionsTips.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/redPackets.html" afterPath="$PROJECT_DIR$/pages/redPackets.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/register.html" afterPath="$PROJECT_DIR$/pages/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/scores.html" afterPath="$PROJECT_DIR$/pages/scores.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/studyList.html" afterPath="$PROJECT_DIR$/pages/studyList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/trainRecord.html" afterPath="$PROJECT_DIR$/pages/trainRecord.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/trainSchool.html" afterPath="$PROJECT_DIR$/pages/trainSchool.html" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ms-wechat" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="answerSheets.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/answerSheets.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mine.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/mine.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="34" />
+    <option name="width" value="1260" />
+    <option name="height" value="704" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ms-wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ms-wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ms-wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ms-wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/ms-wechat/index.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75a62739-d9e5-4610-aefc-10b3e5ca872b" name="Default" comment="" />
+      <created>1521530288048</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521530288048</updated>
+      <workItem from="1521530291393" duration="1053000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1053000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="34" width="1260" height="704" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Weex Documents" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Weex Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13562092" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MP_verify_O3viPzmtqRCTk7vz.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/register.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/job.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3690">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/answerSheets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/mine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

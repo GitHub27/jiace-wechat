@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../css/global.css">
+  <link rel="stylesheet" type="text/css" href="../css/jquery.mytoast.css">
+  <link rel="stylesheet" type="text/css" href="../css/jobDetails.css">
+  <title>家策微课堂</title>
+</head>
+<body>
+  <div id="layer"></div> 
+  <div class="shareRedPacket-pop">
+    <p class="shareArrow">立即分享</p>
+    <div class="activityRules">
+      <h1>分享步骤</h1>
+      <ul>
+        <li>1、点击右上角...</li>
+        <li>2、选择分享方式，分享给朋友</li>
+        <li><img src="../img/jobshare.png" /></li>
+      </ul>
+    </div>
+  </div> 
+  <header>
+    <a class="goBack" href="job.html"></a>
+    <h1>职位详情</h1>
+    <span id="share">分享职位</span>
+  </header>
+  <div id="grapDetails">
+    <div class="grapContainer">
+      <div class="grapHeader">
+        <div class="headTop">
+          <h4><span> 正在寻找 </span>钟点工 - 临时 </h4> 
+        </div>
+        <ul class="headBottom">
+          <li class="bottomInfo">
+            <p>2018-01-06</p> 
+            <p class="lin02">发布时间</p>
+          </li> 
+          <li class="bottomInfo">
+            <p>5000元/26天</p>
+            <p class="lin02">价格预算</p>
+          </li> 
+          <li class="bottomInfo">
+            <p>29-39岁</p>
+            <p class="lin02">年龄要求</p>
+          </li>
+        </ul>
+      </div>
+      <div class="grapSection">
+        <div class="grapWrapper">
+          <h5>需求详情</h5>
+          <ul class="demandLists">
+             <li class="demandItem">
+               <h6 class="demandLeft"> 服务区域 </h6> 
+              <div class="demandRight"> 上海-浦东新区-张江镇 </div>
+            </li> 
+            <li class="demandItem">
+              <h6 class="demandLeft"> 服务时间 </h6> 
+              <div class="demandRight"> 2018-01-09 至 2018-02-01 </div>
+            </li> 
+            <li class="demandItem">
+              <h6 class="demandLeft"> 技能要求 </h6>
+              <div class="demandRight"> 手擦地板、家电清洁、手洗衣物 </div>
+            </li>
+          </ul>
+        </div>
+        <div class="grapWrapper">
+          <h5>职位要求</h5> 
+          <ul class="demandLists">
+            <li class="demandItem">
+            <div>
+              <p class="paragraph">wuxiaolongfenxiang辅食、早教、年龄小于50岁，会普通话，好沟通，性辅食、早教、年龄小于50岁，会普通话，好沟通，性</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="mendian">
+      <span>天天家政（徐汇店南丹东路3000号雅度商务楼）</span>
+    </div> 
+    <div class="mobile">
+      <a class="mobileBtn" href="tel:"> <span>超老师</span> </a>
+    </div>
+  </div>
+<script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery.myToast.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jq.extend.js"></script>
+<script src="/components/vendor/utils/mapping.js"></script>
+<script src="/components/vendor/utils/common.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="/components/vendor/utils/share_wachet.js"></script>
+<script type="text/javascript">
+  function timedMsg(s, href) {
+    setTimeout(function () {
+      window.location.href = href
+    }, s);
+  }
+  var urlpath = "";
+  var imgurl = "http://" + window.location.host + "/img/zhaopin.jpg";
+  shareWechat.init_share_params = {
+    'onMenuShareTimeline.title': '上好服务，找好工作',
+    'onMenuShareTimeline.imgUrl': imgurl,
+    'onMenuShareAppMessage.title': '上好服务，找好工作',
+    'onMenuShareAppMessage.imgUrl': imgurl,
+    'onMenuShareAppMessage.desc': '一大波最新的家政服务岗位等你来应聘'
+  };
+  shareWechat.sharePage(urlpath);
+  var wx_openid = params.wx_openid;
+  // var wx_openid = "oC1aRuCuXO6eUPYeSnFDcMe7hj5o";
+
+  var isLogin;
+  function initUserInfo() {
+    $.ajax({
+      url: window.global_config.userInfo,
+      type: "get",
+      dataType: "json",
+      async: false,
+      headers: {
+        'wx-openid': wx_openid,
+      },
+      success: function success(data) {
+        if (data.success) {
+          isLogin = true;
+        } else {
+          checkAuth(data.code);
+          isLogin = false;
+        }
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    });
+  }
+
+ 
+  window.onload = function () {
+    initUserInfo();
+  }
+
+
+  $(document).ready(function () {
+    $("#share").click(function(){
+      $(".shareRedPacket-pop").show();
+    });
+    $(".shareRedPacket-pop").click(function(){
+      $(this).hide();
+    });
+  })
+</script>
+</body>
+
+</html>

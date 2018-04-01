@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.mytoast.css">
+    <link rel="stylesheet" type="text/css" href="../css/messageCenter.css">
+    <title>家策微课堂</title>
+</head>
+
+<body>
+    <header>
+        <a class="goBack" href="mine.html"></a>
+        <h1>消息中心</h1>
+        <span id="sort">筛选</span>
+    </header>
+    <div class="Filter">
+        <ul>
+            <li data-code='' class="active"><a>全部</a></li>
+            <li data-code='01'><a>考试通知</a></li>
+        </ul>
+    </div>
+    <div id="ol-layer"></div>
+    <div class="message_content">
+        <!-- <div class="mess_list">
+            <h2>考试提醒<span>2017-12-20</span></h2>
+            <div class="mess_det">
+                <ul>
+                    <li><label>考试科目</label><p>母婴护理<span>（理论考试）</span></p></li>
+                    <li><label>考试时间</label><p>2017-12-20 14:30:00</p></li>
+                    <li><label>考试地点</label><p>天山路1800号</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mess_list">
+            <h2>考试结果通知<span>2017-12-20</span></h2>
+            <div class="mess_det">
+                <ul>
+                    <li><label>考试科目</label><p>母婴护理</p></li>
+                    <li><label>考试结果</label><p>合格</p></li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/jquery.myToast.js"></script>
+    <script src="/components/vendor/utils/mapping.js"></script>
+    <script src="/components/vendor/utils/common.js"></script>
+     <script src="/components/vendor/mine/messageCenter.js"></script> 
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/components/vendor/utils/share_wachet.js"></script>
+    <script type="text/javascript">
+        var urlpath = "";
+        var imgurl = "http://" + window.location.host + "/img/logojiacer.jpg";
+        shareWechat.init_share_params = {
+            'onMenuShareTimeline.title': '家策微课堂，家庭技能服务在线课程',
+            'onMenuShareTimeline.imgUrl': imgurl,
+            'onMenuShareAppMessage.title': '家策微课堂，家庭技能服务在线课程',
+            'onMenuShareAppMessage.imgUrl': imgurl,
+            'onMenuShareAppMessage.desc': '技多不压身，工作更轻松'
+        };
+        shareWechat.sharePage(urlpath);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+body{
+  background-color: #f0f0f5;
+}
+.message_content {
+    padding: 1rem 1rem 0;
+}
+
+.mess_list {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: .4rem;
+    padding: 0 1rem;
+}
+
+.mess_list h2 {
+    padding: 1.5rem 0 1.5rem 4.2rem;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #f0f0f5;
+    background: url(../img/kaoshi.png) no-repeat;
+    background-position: left center;
+    background-size: 3rem;
+}
+
+.mess_list h2 span {
+    color: #d6d6d6;
+    float: right;
+    font-size: 1.4rem;
+}
+
+.message_content .mess_det {
+    padding: 1.4rem 0;
+}
+
+.message_content .mess_det ul li {
+    overflow: hidden;
+    line-height: 2rem;
+    padding: .8rem 0;
+}
+
+.message_content .mess_det ul li label {
+    width: 8rem;
+    float: left;
+}
+
+.message_content .mess_det ul li p {
+    padding-left: 8rem;
+}
+.message_content .mess_det ul li p span{
+  color: #888888;
+}
+
+header span {
+    position: absolute;
+    right: 1.5rem;
+    line-height: 4.4rem;
+    top: 0;
+    color: #888888;
+    font-size: 1.4rem;
+    padding-right: 1.6rem;
+    background: url(../img/messdown.png) no-repeat;
+    background-position: right center;
+    background-size: .9rem;
+}
+
+header span.active {
+    background: url(../img/messup.png) no-repeat;
+    background-position: right center;
+    background-size: .9rem;
+}
+#ol-layer {position: fixed; top: 4.4rem; left: 0;right:0;bottom:0;background-color:#000000;z-index:90;-moz-opacity: 0.3;opacity:.30;filter: alpha(opacity=30);display: none;}
+.Filter {
+  width: 100%;position: absolute;left: 0;top: 4.4rem;background-color: #F0F0F0;z-index: 110;display: none;
+}
+
+.Filter ul{padding: 0 2rem;border-top: 1px solid #E6E6E6;margin-top: .3rem;background-color: #FFFFFF;}
+.Filter ul li{border-top: 1px solid #F0F0F0;line-height: 4.4rem;font-size: 1.4rem;position: relative;}
+.Filter ul li a{display: block; width: 100%; height: 100%; color: #333;}
+.Filter ul li.active a{color: #FF9900;background: url(../img/messdui.png) no-repeat;background-size: 1.4rem;background-position: right center;}
+.Filter ul li a img{display: none;}
+.Filter ul li.active a img{display: block;}
