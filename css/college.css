@@ -195,7 +195,7 @@ body {
     background: url(../img/jobphone.png) no-repeat;
     background-position: 1.3rem center;
     background-size: 1.5rem 1.5rem;
-    background-color: #ff9900;
+    background-color: #31c27c;
     float: right;
     -webkit-box-shadow: 0 .2rem .4rem #de9e7b;
     -moz-box-shadow: 0 .2rem .4rem #de9e7b;
@@ -209,7 +209,7 @@ body {
 	background:url(../img/jobphone.png) no-repeat;
 	background-position:center;
 	background-size: 1.8rem 1.8rem;
-    background-color: #ff9900;
+    background-color: #31c27c;
     position: absolute;
     left: -2.6rem;
     top: -.2rem;
@@ -264,7 +264,7 @@ body {
 }
 
 .contact-pop .cp-btn .cpb-call {
-    color: #FF9900;
+    color: #31c27c;
 }
 
 #layer {
@@ -394,7 +394,7 @@ body {
 }
 
 #area_sp div ul .area-on {
-    color: #FF9900;
+    color: #31c27c;
     background-color: #fff;
 }
 

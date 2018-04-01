@@ -678,7 +678,7 @@
         } else {
           $(".sortCondition").slideUp();
           $("#jlb-layer").show();
-          $(this).children("span").css("color", "#FF9900");
+          $(this).children("span").css("color", "#31c27c");
           $(this).siblings().children("span").css("color", "#333");
           $(this).children("img").attr("src", "../img/up.png");
           $(this).siblings().children("img").attr("src", "../img/down.png");
@@ -725,7 +725,7 @@
           var index0 = $price_content.index($(this).parent())
           $(".sortType span").eq(index).text($("#salaryType li").eq(index0).text());
         } else {
-          // $(".sortType span").eq(index).css("color","#FF9900");
+          // $(".sortType span").eq(index).css("color","#31c27c");
           $(".sortType span").eq(index).text($(this).text());
         }
         if (index == "1") {
@@ -735,7 +735,7 @@
           $(this).siblings("p").css("color", "#333333").children("img").hide();
         }
         // $(this).siblings("p").css("color", "#333333").children("img").hide();
-        $(this).css("color", "#FF9900").children("img").show();
+        $(this).css("color", "#31c27c").children("img").show();
         $(this).addClass("mf-on");
         $(this).siblings("p").removeClass("mf-on");
         // var serviceType = $("#sortService p.mf-on").data("sercode");
