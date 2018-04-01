@@ -5,12 +5,15 @@
   margin-bottom: 5rem;
   overflow: hidden;
 }
+
 .register_info {
   height: 5.5rem;
 }
+
 .register_info:not(:last-child) {
   border-bottom: 1px solid #dbdbdb;
 }
+
 .register_info label {
   display: block;
   float: left;
@@ -20,6 +23,7 @@
   font-size: 1.6rem;
   color: #808080;
 }
+
 .register_info input {
   color: #333333;
   line-height: 2rem;
@@ -28,14 +32,17 @@
   border: none;
   -webkit-appearance: none;
 }
+
 .phone {
   padding: 1.6rem 0 1.5rem 6rem;
 }
+
 .img_code,
 .message_code {
   padding: 1.6rem 8.5rem 1.5rem 6rem;
   position: relative;
 }
+
 .img_code img {
   position: absolute;
   top: 0.9rem;
@@ -44,13 +51,14 @@
   height: 3.6rem;
   border-radius: .1rem;
 }
+
 .message_code #captcha {
   border: none;
   border-radius: .1rem;
   box-sizing: border-box;
   width: 10rem;
   height: 3.6rem;
-  background-color: #ff7f3a;
+  background-color: #31c27c;
   position: absolute;
   top: .9rem;
   right: .5rem;
@@ -58,21 +66,25 @@
   opacity: .5;
   font-size: 1.4rem;
 }
+
 .register_bt {
   padding: 0 1rem;
   position: relative;
 }
+
 .register_bt p {
   text-align: center;
   margin-top: 1.5rem;
   font-size: 1.2rem;
   color: #808080;
 }
+
 .register_bt p a {
-  color: #ff7f3a;
+  color: #31c27c;
 }
+
 .register_bt input {
-  background-color: #ff7f3a;
+  background-color: #31c27c;
   -webkit-appearance: none;
   color: #fff;
   width: 100%;
@@ -82,6 +94,7 @@
   font-size: 1.8rem;
   opacity: .5;
 }
+
 .layer {
   position: fixed;
   width: 100%;
@@ -89,6 +102,7 @@
   margin: 0 auto;
   text-align: center;
 }
+
 .layer .prompt {
   border: none;
   background: rgba(0, 0, 0, 0.6);
@@ -98,21 +112,26 @@
   line-height: 3.4rem;
   border-radius: 1.7rem;
 }
+
 ::-webkit-input-placeholder {
   color: #dbdbdb;
   font-size: 1.5rem;
 }
+
 ::-moz-placeholder {
   color: #dbdbdb;
   font-size: 1.5rem;
 }
+
 :-ms-input-placeholder {
   color: #dbdbdb;
   font-size: 1.5rem;
 }
+
 .clickable {
-  opacity: 1!important;
+  opacity: 1 !important;
 }
+
 .agreement {
   display: none;
   width: 100%;
@@ -123,9 +142,11 @@
   background: #F8F8F8;
   z-index: 999;
 }
+
 .agreement pre {
   word-wrap: break-word;
 }
+
 .toast {
   top: 43.2rem;
   border: none;
@@ -136,5 +157,5 @@
   line-height: 3.4rem;
   border-radius: 1.7rem;
   height: auto;
-  margin-top: 0!important;
+  margin-top: 0 !important;
 }

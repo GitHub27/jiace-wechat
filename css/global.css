@@ -183,7 +183,6 @@ body {
     font-size: 1.4rem;
 }
 
-
 /*头部*/
 
 header {
@@ -191,7 +190,7 @@ header {
     font-size: 1.7rem;
     background-color: #FFFFFF;
     position: relative;
-    border-bottom: 1px solid #FF7F3A;
+    border-bottom: 1px solid #31c27c;
 }
 
 header h1 {
@@ -201,7 +200,6 @@ header h1 {
     font-size: 1.7rem;
     background-color: #fff;
 }
-
 
 /*上一页*/
 
@@ -217,7 +215,6 @@ header .goBack {
     left: 1.5rem;
     top: 0;
 }
-
 
 /*底部*/
 
@@ -278,6 +275,11 @@ footer .job {
 
 footer .mine {
     background-image: url(../img/mine1.png);
+    background-size: 2.1rem 2.2rem;
+}
+
+footer .college {
+    background-image: url(../img/university1.png);
     background-size: 2.1rem 2.2rem;
 }
 

@@ -24,7 +24,7 @@ a.shareJob {
     position: absolute;
     right: 1.5rem;
     top: 0;
-    color: #ff7f3a;
+    color: #31c27c;
     font-size: 1rem;
     background-size: 1.8rem 1.8rem;
     text-align: center;
@@ -90,8 +90,8 @@ body {
 
 .base-info h3 {
     color: #333;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+    font-size: 1.9rem;
+    margin-bottom: 1.2rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -122,6 +122,8 @@ body {
     display: block;
     float: left;
     width: 16rem;
+    line-height: 1.5;
+    margin-top: -0.2rem;
 }
 
 .info-bottem {
@@ -149,6 +151,7 @@ body {
 }
 
 .info-bottem .course-more {
+    display: inline-block;
     box-sizing: border-box;
     color: #31c27c;
     width: 30%;
@@ -435,7 +438,7 @@ body {
 }
 
 .price_tab ul li.active {
-    border-bottom: 3px solid #ff7f3a;
+    border-bottom: 3px solid #31c27c;
     margin-bottom: -2px;
 }
 
@@ -468,8 +471,8 @@ body {
 }
 
 .more_list ul li.mf-on {
-    color: #ff7f3a;
-    border-color: #ff7f3a;
+    color: #31c27c;
+    border-color: #31c27c;
 }
 
 #more {
@@ -500,8 +503,8 @@ body {
 }
 
 .button_box a.confirm {
-    border: 1px solid #ff7f3a;
-    color: #ff7f3a;
+    border: 1px solid #31c27c;
+    color: #31c27c;
 }
 
 /*分享*/
@@ -546,9 +549,9 @@ img.shareinfo {
     color: #6b6b6b;
 }
 
-footer .job {
-    background-image: url(../img/job2.png);
+footer .college {
+    background-image: url(../img/university2.png);
     background-size: auto 2.2rem;
     background-position: center 0.2rem;
-    color: #FF7F3A;
+    color: #31c27c;
 }

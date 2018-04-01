@@ -26,7 +26,7 @@ try {
         success: function success(data) {
           if (data.code == 0) {
             responseData(data.jsonData);
-          }  else {
+          } else {
             checkAuth(data.code);
             $.toast(data.msg);
           }
@@ -51,10 +51,10 @@ try {
             amount = filterAmount(amount);
             console.log(amount);
             $(".amount").html(amount + "元")
-            $(".redPacketLink").attr("href","redPackets.html");
+            $(".redPacketLink").attr("href", "redPackets.html");
           } else if (data.code == 20004) {
             $(".amount").html("0.00元")
-            $(".redPacketLink").attr("href","redPackets.html");
+            $(".redPacketLink").attr("href", "redPackets.html");
           } else {
             checkAuth(data.code);
             $.toast(data.msg);
@@ -87,6 +87,8 @@ try {
       } else if ($(this).index() == 1) {
         window.location.href = "/pages/job.html";
       } else if ($(this).index() == 2) {
+        window.location.href = "/pages/college.html";
+      } else if ($(this).index() == 3) {
         window.location.href = "/pages/mine.html";
       }
     });

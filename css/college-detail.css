@@ -23,26 +23,91 @@ h1 i {
 
 .study_list .study_list_pannel {
   padding: 2.2rem 2.5rem 1.5rem 2.9rem;
+  position: relative;
 }
 
 .study_list h2 {
   position: relative;
 }
 
-.study_list h2:before {
+.study_list_pannel:before {
   content: "";
   position: absolute;
-  left: -1.6rem;
-  top: .3rem;
-  width: .8rem;
-  height: .8rem;
-  background: #333333;
+  left: 1.4rem;
+  top: 2.4rem;
+  width: .5rem;
+  height: 1.4rem;
+  background: #31c27c;
+}
+
+.title-warp {
+  overflow: hidden;
+}
+
+.title-warp span {
+  padding-top: 0.2rem;
+  float: right;
+}
+
+.title-warp span img {
+  vertical-align: baseline;
+  margin-right: 0.5rem;
+}
+
+.info-base {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.info-base .colloge-desc {
+  position: relative;
+  font-size: 1.4rem;
+  color: #808080;
+  line-height: 2.2rem;
+}
+
+.descript {
+  height: 78px;
+  overflow: hidden;
+}
+
+.desc-more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 6rem;
+  text-align: right;
+  color: #31c27c;
+}
+
+.desc-more img {
+  width: 1.2rem;
+  vertical-align: baseline;
+  margin-left: -0.5rem;
+}
+
+.info-base h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.6rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f5;
 }
 
 .study_list h2 {
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 1.6rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.6rem;
+  float: left;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
 }
 
 .study_list h3 {
@@ -301,4 +366,17 @@ a.car-popup-ok {
   transition-duration: .4s;
   -webkit-transform: translate3d(0, 0, 0) scale(.815);
   transform: translate3d(0, 0, 0) scale(.815);
+}
+
+.colloge-info {}
+
+.colloge-info .colloge-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  line-height: 100%;
+}
+
+header {
+  border-bottom: none;
 }

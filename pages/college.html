@@ -103,7 +103,9 @@
         </div>
         <div class="info-bottem">
           <p class="course-list">母婴护理、育婴师、家政服务员</p>
-          <p class="course-more">更多课程>></p>
+          <a href='/pages/college-detail.html?id=' class="course-more">
+            更多课程>>
+          </a>
         </div>
       </li>
     </ul>
@@ -111,6 +113,7 @@
   <footer>
     <a class="school">在线学堂</a>
     <a class="job">找工作</a>
+    <a class="college">院校</a>
     <a class="mine">我的</a>
   </footer>
   <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -168,7 +171,7 @@
         }
       });
     }
-    //获取总条数
+    //获取总条数》》》改成院校！！！！！！！！！！！！！！！！！！！！！！！！！！
     function records(serviceType, privince, city, age, salaryType, salary) {
       $.ajax({
         url: window.global_config.job,
@@ -359,7 +362,7 @@
     }
 
     window.onload = function () {
-      //工种查询
+      //工种查询》》》》改成课程！！！！！！！！！！！！！！！！！！
       $.ajax({
         url: window.global_config.getServiceType,
         type: "get",
@@ -377,70 +380,6 @@
               });
               $("#sortService").html(html);
             }
-          } else {
-            checkAuth(data.code);
-            console.log(data.msg);
-          }
-        },
-        error: function (err) {
-          console.log(err);
-        }
-      });
-      //年龄
-      $.ajax({
-        url: window.global_config.getAgeRange,
-        type: "get",
-        data: {},
-        dataType: "json",
-        async: false,
-        success: function success(data) {
-          if (data.success) {
-            proObj = data.jsonData;
-            var html = "";
-            $.each(proObj, function (i, item) {
-              if (item.value == "不限") {
-                html += "";
-              } else {
-                html += "<li data-age='" + item.id + "'>" + item.value + "</li>";
-              }
-            });
-            $("#sortAge ul").html(html);
-          } else {
-            checkAuth(data.code);
-            console.log(data.msg);
-          }
-        },
-        error: function (err) {
-          console.log(err);
-        }
-      });
-      //薪资
-      $.ajax({
-        url: window.global_config.getServiceIncome,
-        type: "get",
-        data: {},
-        dataType: "json",
-        async: false,
-        success: function success(data) {
-          if (data.success) {
-            dataJD = data.jsonData;
-            var html = "";
-            $.each(dataJD, function (i, item) {
-              if (i == "0") {
-                html += "<li class='active' data-sercode='" + item.id + "'>" + item.value + "</li>";
-              } else {
-                html += "<li data-sercode='" + item.id + "'>" + item.value + "</li>";
-              }
-
-              var dataPrie = item.ceList;
-              var html0 = "<p data-sercode=''>全部<img src='../img/check.png' /></p>";
-              $.each(dataPrie, function (j, item0) {
-                html0 += "<p data-sercode='" + item0.id + "'>" + item0.value +
-                  "<img src='../img/check.png' /></p>";
-              })
-              $(".price_content").eq(i).html(html0);
-            });
-            $("#salaryType").html(html);
           } else {
             checkAuth(data.code);
             console.log(data.msg);
@@ -554,26 +493,6 @@
         }
         $("#jlb-layer").css("top", layH);
       });
-      // var $sortType = $(".sortType");
-      // 	$sortType.click(function(){
-      // 		var index =  $sortType.index(this);
-      // 		if($(this).hasClass("active")){
-      // 				$("#jlb-layer").hide();
-      // 			$(".sortCondition").eq(index).slideUp();
-      // 			$(this).removeClass("active");
-      // 			$(this).children("img").attr("src","img/down.png");
-      // 		}else {
-      // 			$("#jlb-layer").show();
-      // 			$(".sortCondition").slideUp();
-      // 			$(".sortCondition").eq(index).slideDown();
-      // 			$(this).addClass("active")
-      // 						.children("img").attr("src","img/up.png");
-      // 		$(this).siblings().removeClass("active");
-      // 		$(this).siblings().children("img").attr("src","img/down.png");
-      // 		}
-      //
-      // });
-
 
       $(".sortType").click(function () {
         $(".job_list_box").css("minHeight", companyMinHeight);
@@ -787,6 +706,8 @@
         } else if ($(this).index() == 1) {
           window.location.href = "/pages/job.html";
         } else if ($(this).index() == 2) {
+          window.location.href = "/pages/college.html";
+        } else if ($(this).index() == 3) {
           window.location.href = "/pages/mine.html";
         }
       });

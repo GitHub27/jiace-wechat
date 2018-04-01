@@ -23,6 +23,8 @@ try {
       } else if ($(this).index() == 1) {
         window.location.href = "/pages/job.html";
       } else if ($(this).index() == 2) {
+        window.location.href = "/pages/college.html";
+      } else if ($(this).index() == 3) {
         window.location.href = "/pages/mine.html";
       }
     });
@@ -35,11 +37,11 @@ try {
    if (!isEmpty(invid)) {
    localStorage.setItem("invite-code", invid);
    }*/
-//初始化数据--课程学习
+  //初始化数据--课程学习
   var wx_openid = localStorage.getItem('wx-openid');
-  var invite_code = "";//localStorage.getItem('invite-code');
+  var invite_code = ""; //localStorage.getItem('invite-code');
 
-//推荐课程
+  //推荐课程
   function recommend() {
     $(".content-block").html("");
     var $this = $(".buttons-tab a").last();
@@ -107,14 +109,14 @@ try {
   //初始化推荐课程
   function initRecommend() {
     return div("div", "content native-scroll").append(
-        div('div', 'card').append(
-            div("div", "card-content").append(
-                div("div", "list-block media-list courseList").append(
-                    div("ul", "").attr("id", "recommendC")
-                )
-            )
-        ),
-        div("div", "").attr("id", "modal")
+      div('div', 'card').append(
+        div("div", "card-content").append(
+          div("div", "list-block media-list courseList").append(
+            div("ul", "").attr("id", "recommendC")
+          )
+        )
+      ),
+      div("div", "").attr("id", "modal")
     );
   }
 
@@ -159,13 +161,13 @@ try {
   //初始化已报课程
   function initEnrolled() {
     return div("div", "content native-scroll").append(
-        div('div', 'card').append(
-            div("div", "card-content").append(
-                div("div", "list-block media-list courseList").append(
-                    div("ul", "").attr("id", "courseOwn")
-                )
-            )
+      div('div', 'card').append(
+        div("div", "card-content").append(
+          div("div", "list-block media-list courseList").append(
+            div("ul", "").attr("id", "courseOwn")
+          )
         )
+      )
     );
   }
 
@@ -224,8 +226,8 @@ try {
         if (data.code == 0) {
           saveStorage('isLogin', 1);
           invite_code = data.jsonData.inviteCode;
-          localStorage.setItem("invite-code", invite_code);//自己的
-        }else {
+          localStorage.setItem("invite-code", invite_code); //自己的
+        } else {
           checkAuth(data.code);
         }
       },

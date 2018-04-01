@@ -5,13 +5,13 @@
 var wx_openid = localStorage.getItem('wx-openid');
 // var wx_openid = "oC1aRuCuXO6eUPYeSnFDcMe7hj5o";
 var params = {
-  wx_openid :'wx-openid'
+  wx_openid: 'wx-openid'
 };
 var invite_code = getUrlParamSp('invite-code');
-var inviterCode= sessionStorage.getItem('inviter-code');
+var inviterCode = sessionStorage.getItem('inviter-code');
 
-if(isEmpty(wx_openid)){
- auth();
+if (isEmpty(wx_openid)) {
+  auth();
 }
 
 function auth() {
@@ -20,19 +20,19 @@ function auth() {
     async: false,
     type: "get",
     success: function success(data) {
-      if (data.code==0) {
-        var url=encodeURIComponent(window.location.href);
-        var redirect=data.jsonData;
-        if(redirect.indexOf('@REDIRECT@')!=-1){
-          redirect=redirect.replace(/@REDIRECT@/,url)
+      if (data.code == 0) {
+        var url = encodeURIComponent(window.location.href);
+        var redirect = data.jsonData;
+        if (redirect.indexOf('@REDIRECT@') != -1) {
+          redirect = redirect.replace(/@REDIRECT@/, url)
         }
-        if (redirect.indexOf('@STATE@')!=-1){
-          redirect=redirect.replace(/@STATE@/,invite_code)
+        if (redirect.indexOf('@STATE@') != -1) {
+          redirect = redirect.replace(/@STATE@/, invite_code)
         }
-        window.location.href=redirect;
+        window.location.href = redirect;
         window.navigate(redirect);
         return;
-      }  else {
+      } else {
         $.toast(data.msg);
       }
     },
@@ -43,10 +43,10 @@ function auth() {
 }
 
 function checkAuth(code) {
-  if(code===20002){
+  if (code === 20002) {
     localStorage.clear();
     auth();
-  }else if(code===20004){
+  } else if (code === 20004) {
     sessionStorage.setItem('isLogin', 0);
   }
 }
@@ -59,6 +59,8 @@ $(document).ready(function () {
     } else if ($(this).index() == 1) {
       window.location.href = "/pages/job.html";
     } else if ($(this).index() == 2) {
+      window.location.href = "/pages/college.html";
+    } else if ($(this).index() == 3) {
       window.location.href = "/pages/mine.html";
     }
   });
@@ -322,7 +324,7 @@ getJsonData.prototype = {
     console.log(nick);
     var req = this.req;
     req.success = function (data) {
-      if (data.code==0) {
+      if (data.code == 0) {
         saveStorage('isLogin', 1);
         responseData(data.jsonData, req.url);
       } else if (data.code == 20004) {
@@ -358,11 +360,11 @@ function initInfo() {
       'invite-code': invite_code
     },
     success: function success(data) {
-      if (data.code==0) {
+      if (data.code == 0) {
         saveStorage('isLogin', 1);
       } else if (data.code == 20004) {
         saveStorage('isLogin', 0);
-      }else if (data.code == 20002) {
+      } else if (data.code == 20002) {
         window.location.href = data.toUrl;
       } else {
         $.toast(data.msg);
@@ -374,8 +376,8 @@ function initInfo() {
   });
 }
 //金额千位分隔2
-function RetainedDecimalPlacesNF(num) {
-　　var source = String(num).split(".");
-　　source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{3})+$)', 'ig'), "$1,");
-　　return source[0];
+function RetainedDecimalPlacesNF(num) {　　
+  var source = String(num).split(".");　　
+  source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{3})+$)', 'ig'), "$1,");　　
+  return source[0];
 };
