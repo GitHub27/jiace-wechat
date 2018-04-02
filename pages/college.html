@@ -130,9 +130,9 @@
       }, s);
     }
 
-    function RetainedDecimalPlacesNF(num) {　　
-      var source = String(num).split(".");　　
-      source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{3})+$)', 'ig'), "$1,");　　
+    function RetainedDecimalPlacesNF(num) {
+      var source = String(num).split(".");
+      source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{3})+$)', 'ig'), "$1,");
       return source[0];
     };
     var urlpath = "";
@@ -172,9 +172,9 @@
       });
     }
     //获取总条数》》》改成院校！！！！！！！！！！！！！！！！！！！！！！！！！！
-    function records(serviceType, privince, city, age, salaryType, salary) {
+    function records(serviceType, privince, city) {
       $.ajax({
-        url: window.global_config.job,
+        url: window.global_config.collogeList,
         type: "get",
         data: {
           serviceType: serviceType,
@@ -277,7 +277,7 @@
                   }
                   html += "<li>" +
                     "<h2><a>" + item.positionName + "</a>" + emsSign + "<span class='price'>" + salary + item
-                    .salaryTypeValue + "</span></h2>" +
+                      .salaryTypeValue + "</span></h2>" +
                     "<h3>" +
                     "<span class='age'>" + item.age + "</span>" +
                     "<span class='location'>" + address + "</span>" +
@@ -362,9 +362,9 @@
     }
 
     window.onload = function () {
-      //工种查询》》》》改成课程！！！！！！！！！！！！！！！！！！
+      //课程条件
       $.ajax({
-        url: window.global_config.getServiceType,
+        url: window.global_config.course_usable,
         type: "get",
         data: {},
         dataType: "json",
@@ -375,7 +375,7 @@
               proObj = data.jsonData;
               var html = "<p data-sercode=''>全部<img src='../img/check.png' /></p>";
               $.each(proObj, function (i, item) {
-                html += "<p data-sercode='" + item.code + "'>" + item.serviceType +
+                html += "<p data-sercode='" + item.courseId + "'>" + item.courseName +
                   "<img src='../img/check.png' /></p>";
               });
               $("#sortService").html(html);

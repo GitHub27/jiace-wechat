@@ -4,6 +4,7 @@
 //var publicPath=window.location.host.indexOf("localhost")>-1?"http://www.jiacer.com/jiacerapps":"http://"+window.location.host+"/jiacerapps";
 try {
   var publicPath = "http://" + window.location.host + "/jiacerapps";
+  var publicPath = "http://139.224.49.192:9006/jiacerapps";
   window.global_config = {
     login: publicPath + "/api/user/login",
     logout: publicPath + "/api/user/logout",
@@ -55,7 +56,9 @@ try {
     getCities: publicPath + "/api/subscribe/cities",
     setting: publicPath + "/api/subscribe/setting",
     subscribe: publicPath + "/api/subscribe",
-    services: publicPath + "/api/subscribe/services"
+    services: publicPath + "/api/subscribe/services",
+    collogeList: publicPath + "/api/school/pageSchoolwithLearn",
+    course_usable: publicPath + "/api/course/base/usable/",
   }
 } catch (e) {
   console.log(e)
