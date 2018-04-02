@@ -368,11 +368,13 @@ a.car-popup-ok {
   transform: translate3d(0, 0, 0) scale(.815);
 }
 
-.colloge-info {}
+.colloge-info {
+  display: none;
+}
 
 .colloge-info .colloge-banner {
   width: 100%;
-  height: auto;
+  height: 10.2rem;
   display: block;
   line-height: 100%;
 }

@@ -82,7 +82,7 @@
   </div>
   <div class="job_list_box">
     <ul class="job_list">
-      <li>
+      <!-- <li>
         <div class="info-main">
           <div class="logo-warp">
             <p class="logo-bg">
@@ -107,7 +107,7 @@
             更多课程>>
           </a>
         </div>
-      </li>
+      </li> -->
     </ul>
   </div>
   <footer>
@@ -253,7 +253,7 @@
     //区域选择
     function serviceProviceSp() {
       $.ajax({
-        url: window.global_config.c001,
+        url: window.global_config.job_province,
         type: "get",
         data: {},
         dataType: "json",
@@ -281,7 +281,7 @@
 
     function serviceCitySp(pcode) {
       $.ajax({
-        url: window.global_config.c002,
+        url: window.global_config.job_city,
         type: "get",
         data: {
           pcode: pcode

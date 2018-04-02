@@ -59,6 +59,10 @@ try {
     services: publicPath + "/api/subscribe/services",
     collogeList: publicPath + "/api/school/pageSchoolwithLearn",
     course_usable: publicPath + "/api/course/base/usable/",
+    job_city: publicPath + '/api/common/area/city', //城市条件
+    job_province: publicPath + '/api/common/area/province', //省条件
+    course_detail: publicPath + '/api/school', //学院详情
+    college_courselist: publicPath + '/course/page',
   }
 } catch (e) {
   console.log(e)
