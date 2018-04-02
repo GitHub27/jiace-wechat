@@ -42,7 +42,7 @@
 
     <!--服务工种-->
     <div class="sortCondition" id="sortService">
-      <p class="mf-on" data-sercode="">全部
+      <!-- <p class="mf-on" data-sercode="">全部
         <img src="../img/check.png" />
       </p>
       <p data-sercode="01">月嫂
@@ -62,7 +62,7 @@
       </p>
       <p data-sercode="06">家庭管家
         <img src="../img/check.png" />
-      </p>
+      </p> -->
     </div>
     <!--地区选择-->
     <div class="sortCondition area_sp" id="sortArea">
@@ -171,139 +171,86 @@
         }
       });
     }
-    //获取总条数》》》改成院校！！！！！！！！！！！！！！！！！！！！！！！！！！
+    //查询院校
     function records(serviceType, privince, city) {
+      getTenantsJobsListInfo(serviceType, privince, city);
+    }
+
+    function getTenantsJobsListInfo(serviceType, privince, city) {
       $.ajax({
         url: window.global_config.collogeList,
         type: "get",
-        data: {
-          serviceType: serviceType,
-          privince: privince,
-          city: city,
-          age: age,
-          salaryType: salaryType,
-          salary: salary,
-          showMore: "02"
-          // serviceCity: serviceCity,
-          // age: age
-        },
-        dataType: "json",
-        async: false,
-        success: function success(data) {
-          if (data.success) {
-            if (data.code == 0) {
-              var dataJD = data.jsonData.rows;
-              // var records = dataJD.jsonData.records;
-              var records = 1000;
-              getTenantsJobsListInfo("1", records, serviceType, privince, city, age, salaryType, salary);
-              console.log(data.msg);
-            } else {
-              checkAuth(data.code);
-            }
-          } else {
-            console.log(data.msg);
-          }
-        }
-      });
-
-    }
-
-    function getTenantsJobsListInfo(pageNumber, pageSize, serviceType, privince, city, age, salaryType, salary) {
-      $.ajax({
-        url: window.global_config.job,
-        type: "get",
         async: false,
         data: {
-          pageNumber: pageNumber,
-          pageSize: pageSize,
-          serviceType: serviceType,
+          pageIndex: 1,
+          pageSize: 1000,
+          courseId: serviceType,
           privince: privince,
-          city: city,
-          age: age,
-          salaryType: salaryType,
-          salary: salary,
-          showMore: "02"
-          // serviceCity: serviceCity,
-          // age: age
+          city: city
         },
         dataType: "json",
         success: function success(data) {
-          if (data.success) {
-            if (data.code == 0) {
-              var dataJD = data.jsonData.rows;
-              var html = "";
-              if (dataJD == "") {
-                html = "<div class='no_found'><p>没有找到你想要的职位~</p></div>";
-              } else {
-                $.each(dataJD, function (i, item) {
-                  //var addTime = item.addTime.substring(0, 11);
-                  var emsSign = "";
-                  if (item.emsSign == "01") {
-                    emsSign = "<i>急</i>";
-                  }
-                  // var age = "";
-                  // var ageMin = item.age.split("-")[0];
-                  // var ageMax = item.age.split("-")[1];
-                  // if (ageMin == "") {
-                  //   age = ageMax;
-                  // } else if (ageMax == "") {
-                  //   age = ageMin;
-                  // } else {
-                  //   age = item.age;
-                  // }
-                  // var salary = "";
-                  // var salaryMin = item.salary.split("-")[0];
-                  // var salaryMax = item.salary.split("-")[1];
-                  // if (salaryMin == "") {
-                  //   salary = salaryMax;
-                  // } else if (salaryMax == "") {
-                  //   salary = salaryMin;
-                  // } else {
-                  //   salary = item.salary;
-                  // }
-                  var address = "";
-                  if (item.area == "") {
-                    if (item.city != "") {
-                      address = item.privince + "-" + item.city;
-                    } else {
-                      var address = item.privince;
-                    }
-                  } else {
-                    address = item.privince + "-" + item.city + "-" + item.area;
-                  }
-                  var salary = "";
-                  if (item.salary != null) {
-                    salary = RetainedDecimalPlacesNF(item.salary);
-                  }
-                  html += "<li>" +
-                    "<h2><a>" + item.positionName + "</a>" + emsSign + "<span class='price'>" + salary + item
-                      .salaryTypeValue + "</span></h2>" +
-                    "<h3>" +
-                    "<span class='age'>" + item.age + "</span>" +
-                    "<span class='location'>" + address + "</span>" +
-                    "</h3>" +
-                    "<div class='demand'>" + item.demand + "</div>" +
-                    "<div class='bottom_info'>" +
-                    "<span class='wesite_name'>" + item.websiteName + "</span>" +
-                    "<a href='tel:" + item.telephone + "' class='link'>" + item.loginName + "</a>" +
-                    "<input type='hidden' value='" + item.telephone + "'>" +
-                    "</div>" +
-                    "</li>";
-                });
-              }
-              $(".job_list").html(html);
-              console.log(data.msg);
-            } else {
-              console.log(data.msg);
-            }
-          } else {
-            checkAuth(data.code);
-            console.log(data.msg);
-          }
+          console.log('success');
+          render(data)
+        },
+        fail: function () {
+
         }
       });
     };
-    //			区域选择
+
+    function render(data) {
+      if (data.success) {
+        if (data.code == 0) {
+          var dataJD = data.jsonData.rows;
+          var html = "";
+          if (dataJD == "") {
+            html = "<div class='no_found'><p>没有找到你想要的学院~</p></div>";
+          } else {
+            $.each(dataJD, function (i, item) {
+              var emsSign = "";
+              if (item.emsSign == "01") {
+                emsSign = "<i>急</i>";
+              }
+              var address = "";
+              if (item.area == "") {
+                if (item.city != "") {
+                  address = item.privince + "-" + item.city;
+                } else {
+                  var address = item.privince;
+                }
+              } else {
+                address = item.privince + "-" + item.city + "-" + item.area;
+              }
+              var salary = "";
+              if (item.salary != null) {
+                salary = RetainedDecimalPlacesNF(item.salary);
+              }
+              html +=
+                '<li><div class="info-main"><div class="logo-warp"><p class="logo-bg"><img src="../img/colloge-logo.png"></p></div><div class="base-info"><h3>' +
+                item.schoolName + '</h3><p class="course-info"><img src="../img/course-teacher.png">' +
+                item.contacts +
+                '</p><p class="course-info"><img src="../img/course-phone.png">' +
+                item.schoolPhone +
+                '</p><p class="course-info"><img class="add-icon" src="../img/course-address.png"><span class="address">' +
+                item.schoolAddress + '</span></p></div></div><div class="info-bottem"><p class="course-list">' +
+                item.learnTypes + '</p><a href="/pages/college-detail.html?id=' + item.id +
+                '" class="course-more">更多课程&gt;&gt;</a></div></li>'
+            });
+          }
+          $(".job_list").html(html);
+          console.log(data.msg);
+        } else {
+          checkAuth(data.code);
+          console.log(data.msg);
+        }
+      } else {
+        checkAuth(data.code);
+        console.log(data.msg);
+      }
+    }
+
+    //区域选择
     function serviceProviceSp() {
       $.ajax({
         url: window.global_config.c001,
@@ -370,6 +317,7 @@
         dataType: "json",
         async: false,
         success: function success(data) {
+
           if (data.success) {
             if (data.code == 0) {
               proObj = data.jsonData;
@@ -402,13 +350,15 @@
       $(window).scroll(function () {
         if ($("body").scrollTop() < fixHeight) {
           $(".jlb-filter").removeClass("jlb-filter_fix");
+          $('.job_list_box').css('margin-top', '0')
         } else {
+          $('.job_list_box').css('margin-top', '5.5rem');
           $(".jlb-filter").addClass("jlb-filter_fix");
         };
       });
 
       //获取所有数据
-      records("", "", "", "", "", "");
+      records("", "", "");
 
       //				地区选择
       $("#area_sp").on("click", "li", function () {
@@ -438,13 +388,7 @@
             if ($("#sortService p.mf-on").length > 0) {
               serviceType = $("#sortService p.mf-on").data("sercode");
             }
-            var salaryType = "";
-            var salary = "";
-            if ($(".price_content p.mf-on").length > 0) {
-              salary = $(".price_content p.mf-on").data("sercode");
-              salaryType = $("#salaryType li.active").data("sercode");
-            }
-            records(serviceType, privince, city, age, salaryType, salary);
+            records(serviceType, privince, city);
           }
 
         } else if ($(this).parents("div").hasClass("city")) {
@@ -476,7 +420,7 @@
             salary = $(".price_content p.mf-on").data("sercode");
             salaryType = $("#salaryType li.active").data("sercode");
           }
-          records(serviceType, privince, city, age, salaryType, salary);
+          records(serviceType, privince, city);
 
         }
       });
@@ -570,13 +514,8 @@
         if ($("#sortService p.mf-on").length > 0) {
           serviceType = $("#sortService p.mf-on").data("sercode");
         }
-        var salaryType = "";
-        var salary = "";
-        if ($(".price_content p.mf-on").length > 0) {
-          salary = $(".price_content p.mf-on").data("sercode");
-          salaryType = $("#salaryType li.active").data("sercode");
-        }
-        records(serviceType, privince, city, age, salaryType, salary);
+
+        records(serviceType, privince);
         $(".sortCondition").slideUp();
         $(".sortType").children("img").attr("src", "../img/down.png");
         $(".sortType span").css("color", "#333333");
@@ -617,14 +556,8 @@
         if ($("#sortService p.mf-on").length > 0) {
           serviceType = $("#sortService p.mf-on").data("sercode");
         }
-        var salaryType = "";
-        var salary = "";
-        if ($(".price_content p.mf-on").length > 0) {
-          salary = $(".price_content p.mf-on").data("sercode");
-          salaryType = $("#salaryType li.active").data("sercode");
-        }
         $(".sortType span").css("color", "#333");
-        records(serviceType, privince, city, age, salaryType, salary);
+        records(serviceType, privince);
         $(".sortCondition").slideUp();
         $(".sortType").children("img").attr("src", "../img/down.png");
         $("#jlb-layer").hide();
@@ -648,7 +581,7 @@
           salaryType = "",
           salary = "";
 
-        records(serviceType, privince, city, age, salaryType, salary);
+        records(serviceType, privince, city);
         $(".sortCondition").slideUp();
         $(".sortType").children("img").attr("src", "../img/down.png");
         $("#jlb-layer").hide();
