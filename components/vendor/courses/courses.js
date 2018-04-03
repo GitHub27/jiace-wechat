@@ -588,7 +588,7 @@ try {
           $("#imgurl").val(dataJD.image);
           $('#courseSummary').val(dataJD.summary);
           $("#courseType").val(dataJD.courseType);
-          $("#price").html(dataJD.price);
+          $("#price").html(formatMoney(dataJD.price));
         }else {
           checkAuth(data.code);
         }

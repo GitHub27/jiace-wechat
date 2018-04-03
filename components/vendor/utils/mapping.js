@@ -4,7 +4,6 @@
 //var publicPath=window.location.host.indexOf("localhost")>-1?"http://www.jiacer.com/jiacerapps":"http://"+window.location.host+"/jiacerapps";
 try {
   var publicPath = "http://" + window.location.host + "/jiacerapps";
-  var publicPath = "http://139.224.49.192:9006/jiacerapps";
   window.global_config = {
     login: publicPath + "/api/user/login",
     logout: publicPath + "/api/user/logout",
@@ -57,8 +56,9 @@ try {
     setting: publicPath + "/api/subscribe/setting",
     subscribe: publicPath + "/api/subscribe",
     services: publicPath + "/api/subscribe/services",
+    //新加
     collogeList: publicPath + "/api/school/pageSchoolwithLearn",
-    course_usable: publicPath + "/api/course/base/usable/",
+    course_usable: publicPath + "/course/base/usable/",
     job_city: publicPath + '/api/common/area/city', //城市条件
     job_province: publicPath + '/api/common/area/province', //省条件
     course_detail: publicPath + '/api/school', //学院详情

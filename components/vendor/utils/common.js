@@ -376,8 +376,26 @@ function initInfo() {
   });
 }
 //金额千位分隔2
-function RetainedDecimalPlacesNF(num) {　　
-  var source = String(num).split(".");　　
-  source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{3})+$)', 'ig'), "$1,");　　
+function RetainedDecimalPlacesNF(num) {
+  var source = String(num).split(".");
+  source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{3})+$)', 'ig'), "$1,");
   return source[0];
 };
+
+/**
+ * 格式化金额成 #.##
+ * @param s 金额
+ * @returns {*}
+ */
+function formatMoney(s) {
+  if (/[^0-9\.]/.test(s)) return "invalid value";
+  s = s.toString();
+  s = s.replace(/^(\d*)$/, "$1.");
+  s = (s + "00").replace(/(\d*\.\d\d)\d*/, "$1");
+  s = s.replace(".", ",");
+  var re = /(\d)(\d{3},)/;
+  while (re.test(s))
+    s = s.replace(re, "$1,$2");
+  s = s.replace(/,(\d\d)$/, ".$1");
+  return s.replace(/^\./, "0.")
+}

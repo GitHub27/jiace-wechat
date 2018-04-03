@@ -10,6 +10,10 @@ var url = window.location.href;
 
 var name = decodeURIComponent(url);
 
+$('.goBack').click(function () {
+  history.back();
+});
+
 function getUrlParamSp(name) {
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
   var r = window.location.search.substr(1).match(reg);
@@ -41,7 +45,7 @@ function recommend() {
   var wx_openid = localStorage.getItem('wx-openid');
   $.ajax({
     url: window.global_config.college_courselist,
-    type: "post",
+    type: "get",
     data: params,
     dataType: "json",
     headers: {
@@ -369,8 +373,13 @@ function getSchoolName() {
           background: "url(" + data.jsonData.logoUrl + ") no-repeat left center",
           backgroundSize: "1.8rem"
         });
-        $('.colloge-banner').attr('src', data.jsonData.schoolBanner);
-        $('.descript').html(data.jsonData.schoolBrief);
+        data.jsonData.schoolBanner && $('.colloge-banner').attr('src', data.jsonData.schoolBanner);
+        if (data.jsonData.schoolBrief) {
+          $('.descript').html(data.jsonData.schoolBrief);
+        }
+        else {
+          $('.desc-more').hide();
+        }
         console.log(data)
       }
     },

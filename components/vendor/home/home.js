@@ -39,7 +39,7 @@ try {
    }*/
   //初始化数据--课程学习
   var wx_openid = localStorage.getItem('wx-openid');
-  var invite_code = ""; //localStorage.getItem('invite-code');
+  var invite_code = "";//localStorage.getItem('invite-code');
 
   //推荐课程
   function recommend() {
@@ -130,7 +130,7 @@ try {
    <div class="cl-content" >
    <h1 class="clearfix">
    <p>${obj.courseName}</p>
-   <span>￥${obj.price}/永久</span>
+   <span>￥${formatMoney(obj.price)}</span>
    </h1>
    <p class="clc1">适合工种：${obj.fitService}</p>
    <p class="clc2">
@@ -226,7 +226,7 @@ try {
         if (data.code == 0) {
           saveStorage('isLogin', 1);
           invite_code = data.jsonData.inviteCode;
-          localStorage.setItem("invite-code", invite_code); //自己的
+          localStorage.setItem("invite-code", invite_code);//自己的
         } else {
           checkAuth(data.code);
         }
