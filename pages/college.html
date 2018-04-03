@@ -109,6 +109,7 @@
         </div>
       </li> -->
     </ul>
+    <div id="loading" style="margin: 10px 0 0;text-align: center;color: #666;">加载中...</div>
   </div>
   <footer>
     <a class="school">在线学堂</a>
@@ -148,6 +149,14 @@
     var wx_openid = localStorage.getItem('wx-openid');
 
     var isLogin;
+    var privince = "";
+    var city = "";
+    var serviceType = "";
+    var currentpage = 0;
+    var pageIndex = 1;
+    var pageSize = 10;
+    var maxNumber = 11; //大于pageSize,因为首次查询
+    var pending = false;
 
     function initUserInfo() {
       $.ajax({
@@ -172,18 +181,33 @@
       });
     }
     //查询院校
-    function records(serviceType, privince, city) {
+    function records(serviceType, privince, city, isloadmore) {
+      if (pending) {
+        return;
+      }
+      if (!isloadmore) {
+        pageIndex = 1;
+      }
+      //没有更多数据
+      if (pageSize * pageIndex >= maxNumber) {
+        $('#loading').html('没有更多数据');
+        return;
+      } else {
+        $('#loading').html('没有更多数据');
+      }
       getTenantsJobsListInfo(serviceType, privince, city);
     }
 
     function getTenantsJobsListInfo(serviceType, privince, city) {
+      pending = true;
+      console.log('loading')
       $.ajax({
         url: window.global_config.collogeList,
         type: "get",
         async: false,
         data: {
-          pageIndex: 1,
-          pageSize: 1000,
+          pageIndex: pageIndex,
+          pageSize: pageSize,
           courseId: serviceType,
           privince: privince,
           city: city
@@ -191,10 +215,15 @@
         dataType: "json",
         success: function success(data) {
           console.log('success');
+          maxNumber = data.jsonData.records;
+          currentpage = data.jsonData.page;
           render(data)
         },
-        fail: function () {
+        error: function () {
 
+        },
+        complete: function () {
+          pending = false;
         }
       });
     };
@@ -347,6 +376,7 @@
       var bodyHeight = $("body").outerHeight(true);
       var companyMinHeight = windowHeight - ttHeight;
       $(".job_list_box").css("minHeight", companyMinHeight);
+      var $body = $("body")
       $(window).scroll(function () {
         if ($("body").scrollTop() < fixHeight) {
           $(".jlb-filter").removeClass("jlb-filter_fix");
@@ -355,6 +385,10 @@
           $('.job_list_box').css('margin-top', '5.5rem');
           $(".jlb-filter").addClass("jlb-filter_fix");
         };
+        if ((document.body.clientHeight - $body.scrollTop() - window.screen.height) <= 5) {
+          records(serviceType, privince, city, true)
+
+        }
       });
 
       //获取所有数据
@@ -378,13 +412,9 @@
             $("#jlb-layer").hide();
             $(".sortType").children("img").attr("src", "../img/down.png");
             $(".sortType span").eq("2").text("区域");
-            var privince = "";
-            var city = "";
-            var age = "";
-            if ($("#sortAge ul li.mf-on").length > 0) {
-              age = $("#sortAge ul li.mf-on").data("age");
-            }
-            var serviceType = "";
+            privince = "";
+            city = "";
+
             if ($("#sortService p.mf-on").length > 0) {
               serviceType = $("#sortService p.mf-on").data("sercode");
             }
@@ -404,22 +434,13 @@
             $(".sortType span").eq("2").text($("#area_sp .city .area-on").text());
           }
 
-          var privince = $("input[name='serviceProvice']").val();
-          var city = $("input[name='serviceCity']").val();
-          var age = "";
-          if ($("#sortAge ul li.mf-on").length > 0) {
-            age = $("#sortAge ul li.mf-on").data("age");
-          }
-          var serviceType = "";
+          privince = $("input[name='serviceProvice']").val();
+          city = $("input[name='serviceCity']").val();
+
           if ($("#sortService p.mf-on").length > 0) {
             serviceType = $("#sortService p.mf-on").data("sercode");
           }
-          var salaryType = "";
-          var salary = "";
-          if ($(".price_content p.mf-on").length > 0) {
-            salary = $(".price_content p.mf-on").data("sercode");
-            salaryType = $("#salaryType li.active").data("sercode");
-          }
+
           records(serviceType, privince, city);
 
         }
@@ -504,18 +525,13 @@
         $(this).css("color", "#31c27c").children("img").show();
         $(this).addClass("mf-on");
         $(this).siblings("p").removeClass("mf-on");
-        var privince = $("input[name='serviceProvice']").val();
-        var city = $("input[name='serviceCity']").val();
-        var age = "";
-        if ($("#sortAge ul li.mf-on").length > 0) {
-          age = $("#sortAge ul li.mf-on").data("age");
-        }
-        var serviceType = "";
+        privince = $("input[name='serviceProvice']").val();
+        city = $("input[name='serviceCity']").val();
         if ($("#sortService p.mf-on").length > 0) {
           serviceType = $("#sortService p.mf-on").data("sercode");
         }
 
-        records(serviceType, privince);
+        records(serviceType, privince, city);
         $(".sortCondition").slideUp();
         $(".sortType").children("img").attr("src", "../img/down.png");
         $(".sortType span").css("color", "#333333");
@@ -546,18 +562,14 @@
       })
       // 确认筛选
       $(".button_box").on("click", ".confirm", function () {
-        var privince = $("input[name='serviceProvice']").val();
-        var city = $("input[name='serviceCity']").val();
-        var age = "";
-        if ($("#sortAge ul li.mf-on").length > 0) {
-          age = $("#sortAge ul li.mf-on").data("age");
-        }
-        var serviceType = "";
+        privince = $("input[name='serviceProvice']").val();
+        city = $("input[name='serviceCity']").val();
+
         if ($("#sortService p.mf-on").length > 0) {
           serviceType = $("#sortService p.mf-on").data("sercode");
         }
         $(".sortType span").css("color", "#333");
-        records(serviceType, privince);
+        records(serviceType, privince, city);
         $(".sortCondition").slideUp();
         $(".sortType").children("img").attr("src", "../img/down.png");
         $("#jlb-layer").hide();
@@ -574,12 +586,9 @@
         $(".sortType span").eq(0).text("工种");
         $(".sortType span").eq(1).text("薪资");
         $(".sortType span").eq(2).text("区域");
-        var serviceType = "";
-        var privince = "";
-        var city = "";
-        var age = "",
-          salaryType = "",
-          salary = "";
+        serviceType = "";
+        privince = "";
+        city = "";
 
         records(serviceType, privince, city);
         $(".sortCondition").slideUp();
