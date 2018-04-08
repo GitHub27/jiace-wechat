@@ -183,6 +183,7 @@ body {
     font-size: 1.4rem;
 }
 
+
 /*头部*/
 
 header {
@@ -190,7 +191,7 @@ header {
     font-size: 1.7rem;
     background-color: #FFFFFF;
     position: relative;
-    border-bottom: 1px solid #31c27c;
+    border-bottom: 1px solid #31C27C;
 }
 
 header h1 {
@@ -200,6 +201,7 @@ header h1 {
     font-size: 1.7rem;
     background-color: #fff;
 }
+
 
 /*上一页*/
 
@@ -215,6 +217,7 @@ header .goBack {
     left: 1.5rem;
     top: 0;
 }
+
 
 /*底部*/
 

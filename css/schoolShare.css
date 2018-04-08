@@ -1,12 +1,10 @@
 body {
   background-color: #FFFFFF !important;
 }
-
 footer .school {
   background-image: url(../img/school2.png) !important;
-  color: #31c27c;
+  color: #31C27C;
 }
-
 .courseTab {
   display: flex;
   display: -webkit-flex;
@@ -15,7 +13,6 @@ footer .school {
   border-bottom: 1px solid #DCDCDC;
   background-color: #FFFFFF;
 }
-
 .courseTab a {
   flex: 1;
   display: block;
@@ -24,24 +21,20 @@ footer .school {
   text-align: center;
   line-height: 4.2rem;
 }
-
 .courseTab .ct-on {
   color: #333333;
   font-size: 1.6rem;
 }
-
 .courseList {
   padding: 0 1rem;
   background-color: #FFFFFF;
 }
-
 .courseList ul li {
   height: 9.2rem;
   border-bottom: 1px solid #DCDCDC;
   padding: 1.8rem 0;
   position: relative;
 }
-
 .courseList ul li img {
   width: 8.1rem;
   height: 8.1rem;
@@ -49,46 +42,37 @@ footer .school {
   left: 0;
   top: 1.8rem;
 }
-
 .courseList ul li .cl-content {
   padding-left: 10rem;
 }
-
 .courseList ul li .cl-content h1 {
   font-size: 1.6rem;
   margin-bottom: .6rem;
 }
-
 .courseList ul li .cl-content h1 p {
   font-size: 1.6rem;
   float: left;
 }
-
 .courseList ul li .cl-content h1 span {
   font-size: 1.5rem;
   float: right;
   color: #F8510A;
 }
-
 .courseList ul li .cl-content .clc1 {
   color: #808080;
   margin-bottom: .8rem;
 }
-
 .courseList ul li .cl-content .clc2 {
   margin-bottom: .8rem;
 }
-
 .courseList ul li .cl-content .clc2,
 .courseList ul li .cl-content .clc3 {
   line-height: 1.3rem;
 }
-
 .courseList ul li .cl-content .clc2 span,
 .courseList ul li .cl-content .clc3 span {
   font-size: 1.2rem;
 }
-
 .courseList ul li .cl-content .clc2 label {
   display: inline-block;
   height: 1.3rem;
@@ -100,7 +84,6 @@ footer .school {
   font-size: 1rem;
   border-radius: 10px;
 }
-
 .courseList ul li .cl-content .clc3 label {
   display: inline-block;
   height: 1.3rem;
@@ -112,9 +95,7 @@ footer .school {
   font-size: 1rem;
   border-radius: 10px;
 }
-
 /*课程详情*/
-
 .shareRedPacket {
   position: absolute;
   right: 1rem;
@@ -128,21 +109,17 @@ footer .school {
   background-size: 2.35rem 2rem;
   padding-left: 2.8rem;
 }
-
 .courseImg img {
   width: 100%;
   height: 16rem;
 }
-
 .courseVideo {
   display: none;
 }
-
 .courseVideo video {
   width: 100%;
   height: 100%;
 }
-
 .cd-tab {
   position: relative;
   height: 4.2rem;
@@ -151,7 +128,6 @@ footer .school {
   display: -webkit-flex;
   border-top: .05rem solid #DCDCDC;
 }
-
 .cd-tab a {
   display: block;
   flex: 1;
@@ -159,11 +135,9 @@ footer .school {
   font-size: 1.5rem;
   color: #808080;
 }
-
 .cd-tab .cdt_on {
-  color: #31c27c;
+  color: #31C27C;
 }
-
 .courseFoot {
   height: 3.6rem;
   background-color: #F7F7F7;
@@ -173,12 +147,10 @@ footer .school {
   width: 100%;
   border-top: 1px solid #E3E3E3;
 }
-
 .courseFoot .cf-btn {
   width: 82%;
   margin: 0 auto;
 }
-
 .courseFoot .cf-btn a {
   display: block;
   height: 100%;
@@ -189,22 +161,18 @@ footer .school {
   border-radius: 5px;
   background-color: #FFFFFF;
 }
-
 .courseFoot .cf-btn .cfb-left {
   float: left;
-  border: 1px solid #31c27c;
-  color: #31c27c;
+  border: 1px solid #31C27C;
+  color: #31C27C;
 }
-
 .courseFoot .cf-btn .cfb-right {
   float: right;
   color: #fff;
-  border: 1px solid #31c27c;
-  background: #31c27c;
+  border: 1px solid #31C27C;
+  background: #31C27C;
 }
-
 /*在线视频*/
-
 .courseContent {
   position: absolute;
   bottom: 6rem;
@@ -213,7 +181,6 @@ footer .school {
   overflow: auto;
   border-top: 1px solid #DCDCDC;
 }
-
 #videoList .vl-district li h1 {
   background-color: #F7F7F7;
   height: 4.2rem;
@@ -227,12 +194,10 @@ footer .school {
   z-index: 10;
   font-weight: bold;
 }
-
 #videoList .vl-district li .vl-subdivision {
   background-color: #FFFFFF;
   padding: 0 1rem;
 }
-
 #videoList .vl-district li .vl-subdivision li {
   position: relative;
   height: 4.2rem;
@@ -241,14 +206,12 @@ footer .school {
   border-bottom: 1px solid #f0f0f0;
   padding: 0 .5rem;
 }
-
 #videoList .vl-district li .vl-subdivision li p {
   padding-right: 6rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 ul.vl-subdivision li a {
   float: right;
   color: #808080;
@@ -257,7 +220,6 @@ ul.vl-subdivision li a {
   right: 0.6rem;
   top: 0;
 }
-
 ul.vl-subdivision li a.play {
   width: 1.8rem;
   height: 100%;
@@ -265,7 +227,6 @@ ul.vl-subdivision li a.play {
   background-size: 1.7rem;
   background-position: center;
 }
-
 ul.vl-subdivision li a.noplay {
   width: 1.8rem;
   height: 100%;
@@ -273,7 +234,6 @@ ul.vl-subdivision li a.noplay {
   background-size: 1.7rem;
   background-position: center;
 }
-
 /*#videoList .vl-district li .vl-subdivision li img {
   width: 1.8rem;
   height: 1.8rem;
@@ -292,138 +252,109 @@ ul.vl-subdivision li a.noplay {
   color: #999999;
   font-size: 1.2rem;
 }*/
-
 /*模拟答题*/
-
 #examination {
   padding: 1.5rem 1rem 0 1rem;
   display: none;
   background: #efeff4;
 }
-
-#examination .examinationCard,
-.exercise {
+#examination .examinationCard,.exercise{
   background: #ffffff;
   border-radius: .6rem;
   border: 1px solid #DBDBDB;
-  padding: 2.3rem 1.5rem 2.3rem 2rem;
+  padding: 2.3rem  1.5rem 2.3rem 2rem;
+}
+.exercise{
+  margin-bottom:1.5rem;
 }
 
-.exercise {
-  margin-bottom: 1.5rem;
-}
-
-#examination .examinationCard h4,
-.exerciseInfo h4 {
+#examination .examinationCard h4 ,.exerciseInfo h4{
   float: left;
   color: #343434;
   font-size: 1.8rem;
-  margin-bottom: .5rem;
+  margin-bottom:.5rem;
   font-family: STHeiti;
   font-weight: 500;
 }
-
-#examination .examinationCard p,
-.exerciseInfo p {
+#examination .examinationCard p,.exerciseInfo p {
   font-size: 1.2rem;
-  line-height: 2rem;
+  line-height:2rem;
   color: #808080;
 }
-
-#examination .examinationCard .startAnswer,
-.exerciseInfo .startExer {
+#examination .examinationCard .startAnswer ,.exerciseInfo .startExer {
   float: right;
   font-size: 1.2rem;
-  margin-top: .5rem;
+  margin-top:.5rem;
   background: url("/img/arrowRt.png") center right no-repeat;
   background-size: .6rem 1rem;
-  padding-right: 1rem;
+  padding-right:1rem;
   color: #999999;
 }
 
 /*学习记录*/
-
 #learningRecords {
   display: none;
 }
-
 #learningRecords table {
   text-align: center;
   width: 100%;
 }
-
 #learningRecords table thead tr {
   height: 4.2rem;
   background-color: #F7F7F7;
 }
-
 #learningRecords table tbody tr {
   height: 4.2rem;
   border-bottom: 1px solid #E6E6E6;
 }
-
 #learningRecords tbody tr {
   margin: 0 3rem;
 }
-
 #learningRecords tbody td {
   font-size: 1.4rem;
 }
-
 #learningRecords tbody td span {
   color: #b2b2b2;
 }
-
 #learningRecords tbody .date {
   font-size: 1.2rem;
 }
-
 #learningRecords ul li {
   font-size: 0;
   height: 4.2rem;
   line-height: 4.2rem;
 }
-
 #learningRecords ul li:not(:first-child) {
   border-bottom: .05rem solid #f0f0f0;
   margin: 0 1rem;
 }
-
 #learningRecords ul li:first-child {
   background: #f7f7f7;
 }
-
 #learningRecords ul li:first-child span {
   font-size: 1.4rem;
   font-weight: 400 !important;
 }
-
 #learningRecords ul li span {
   display: inline-block;
   font-size: 1.2rem;
   text-align: center;
   color: #808080;
 }
-
 #learningRecords ul li .date {
   width: 46%;
 }
-
 #learningRecords ul li .date span {
   color: #ccc;
 }
-
 #learningRecords ul li .score {
   width: 27%;
   font-weight: bold;
 }
-
 #learningRecords ul li .time {
   width: 27%;
 }
-
 /*红包分享弹出层*/
-
 .shareRedPacket-pop {
   position: fixed;
   left: 0;
@@ -434,7 +365,6 @@ ul.vl-subdivision li a.noplay {
   z-index: 200;
   display: none;
 }
-
 .shareRedPacket-pop .shareArrow {
   position: absolute;
   right: 1rem;
@@ -445,24 +375,20 @@ ul.vl-subdivision li a.noplay {
   font-size: 1.5rem;
   color: #FFFFFF;
 }
-
 .shareRedPacket-pop img {
   width: 24.4rem;
   height: 22.6rem;
   display: block;
   margin: 2.5rem auto 2rem;
 }
-
 .activityRules {
   padding: 0 2rem;
 }
-
 .activityRules h1 {
   font-size: 1.5rem;
   color: #FFAC00;
   margin-bottom: .7rem;
 }
-
 .activityRules ul li {
   font-size: 1.2rem;
   line-height: 2.6rem;
@@ -470,7 +396,6 @@ ul.vl-subdivision li a.noplay {
   margin-left: 1.8rem;
   list-style: disc outside !important;
 }
-
 .mask {
   position: absolute;
   top: 0;
@@ -481,7 +406,6 @@ ul.vl-subdivision li a.noplay {
   background: rgba(0, 0, 0, 0.5);
   display: none;
 }
-
 .popup {
   display: none;
   position: fixed;
@@ -493,7 +417,6 @@ ul.vl-subdivision li a.noplay {
   text-align: center;
   background: #f7f7f7;
 }
-
 .popup #close {
   position: absolute;
   width: 1.2rem;
@@ -504,22 +427,18 @@ ul.vl-subdivision li a.noplay {
   background: url(/img/close.png) no-repeat center;
   background-size: 1.2rem;
 }
-
 #orderCourse h3 {
   font-weight: bold;
   font-size: 1.6rem;
   margin-bottom: .9rem;
 }
-
 #orderCourse .codeBox {
   font-size: 1.4rem;
 }
-
 #orderCourse .button {
   background: #f7f7f7;
   padding: 1.2rem 0;
 }
-
 .popup .button button {
   display: inline-block;
   width: 13rem;
@@ -533,42 +452,35 @@ ul.vl-subdivision li a.noplay {
   -moz-appearance: none;
   appearance: none;
 }
-
 .popupText {
   background: #fff;
   padding: 2.8rem 3.8rem;
 }
-
 .popupText label {
-  color: #31c27c;
+  color: #31C27C;
   opacity: .9;
 }
-
 .popupText p {
   font-size: 1.2rem;
   padding-bottom: 2.1rem;
   border-bottom: .02rem dashed #e5e5e5;
   margin-bottom: 2.2rem;
 }
-
 #cancel {
   border: .05rem solid #dddddd;
   border-radius: .1rem;
   color: #808080;
   margin-right: 4rem;
 }
-
 #confirm {
   border-radius: .1rem;
-  background: #31c27c;
+  background: #31C27C;
   color: #fff !important;
   border-width: 0px;
 }
-
 .popupText p {
   color: #808080;
 }
-
 #invitationCode {
   box-sizing: border-box;
   width: 13rem;
@@ -576,37 +488,31 @@ ul.vl-subdivision li a.noplay {
   line-height: 3.6rem;
   margin-left: 1.2rem;
   padding: 0 .9rem;
-  border: .05rem solid #31c27c;
+  border: .05rem solid #31C27C;
   border-radius: .2rem;
   opacity: .7;
 }
-
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #ccc;
   opacity: 1;
 }
-
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #ccc;
   opacity: 1;
 }
-
 input:-ms-input-placeholder {
   color: #ccc;
   opacity: 1;
 }
-
 input::-webkit-input-placeholder {
   color: #ccc;
   opacity: 1;
 }
-
 #courseVideo {
-  height: 16rem !important;
+  height: 16rem!important;
 }
-
-.disabled {
-  background: #cccccc !important;
+.disabled{
+  background: #cccccc!important;
 }

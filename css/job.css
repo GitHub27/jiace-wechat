@@ -24,7 +24,7 @@ a.shareJob {
     position: absolute;
     right: 1.5rem;
     top: 0;
-    color: #31c27c;
+    color: #31C27C;
     font-size: 1rem;
     background-size: 1.8rem 1.8rem;
     text-align: center;
@@ -109,17 +109,15 @@ body {
     background-size: 4.2rem;
     background-position: center top;
 }
-
 .Service_type ul li.service_list7 span {
-    background: url(../img/servicelist07.png) no-repeat;
-    background-size: 4.2rem;
-    background-position: center top;
+  background: url(../img/servicelist07.png) no-repeat;
+  background-size: 4.2rem;
+  background-position: center top;
 }
-
 .Service_type ul li.service_list8 span {
-    background: url(../img/servicelist08.png) no-repeat;
-    background-size: 4.2rem;
-    background-position: center top;
+  background: url(../img/servicelist08.png) no-repeat;
+  background-size: 4.2rem;
+  background-position: center top;
 }
 
 .fix_head {
@@ -146,7 +144,6 @@ body {
     color: #323232;
     line-height: 1.6rem;
 }
-
 .job_list_box li h2 i {
     color: #fff;
     background-color: #ff3000;
@@ -160,7 +157,6 @@ body {
     margin-left: 1.1rem;
     vertical-align: top;
 }
-
 .job_list_box li h2 a {
     overflow: hidden;
     white-space: nowrap;
@@ -168,36 +164,32 @@ body {
     display: inline-block;
     max-width: 16rem;
 }
-
 .job_list_box li h2 span.price {
-    color: #31c27c;
+    color: #ff9900;
     float: right;
     font-size: 1.4rem;
     line-height: 1.4rem;
     margin-top: .2rem;
     font-weight: bold;
-}
 
+}
 .job_list_box li .demand {
     margin-top: 2rem;
     margin-bottom: 2.2rem;
     max-height: 17.6rem;
     overflow: hidden;
 }
-
-.demand p {
+.demand p{
     font-size: 1.4rem;
     color: #333333;
     line-height: 2.2rem;
 }
-
 .job_list_box li h3 {
     line-height: 1.2rem;
     font-size: 1.2rem;
     color: #999999;
     margin-top: 1.5rem;
 }
-
 .job_list_box li h3 span.age {
     padding-left: 1.9rem;
     background: url(../img/nianling.png) no-repeat;
@@ -235,6 +227,7 @@ body {
     border-top: 1px solid #ebebeb;
 }
 
+
 /*.bottom_info span.link {
     width: 7.0rem;
     height: 3.2rem;
@@ -257,12 +250,13 @@ body {
     background: url(../img/jobphone.png) no-repeat;
     background-position: 1.3rem center;
     background-size: 1.5rem 1.5rem;
-    background-color: #31c27c;
+    background-color: #ff9900;
     float: right;
     -webkit-box-shadow: 0 .2rem .4rem #de9e7b;
     -moz-box-shadow: 0 .2rem .4rem #de9e7b;
     box-shadow: 0 .2rem .4rem #de9e7b;
 }
+
 
 /*.link span {
     width: 3.6rem;
@@ -271,7 +265,7 @@ body {
 	background:url(../img/jobphone.png) no-repeat;
 	background-position:center;
 	background-size: 1.8rem 1.8rem;
-    background-color: #31c27c;
+    background-color: #ff9900;
     position: absolute;
     left: -2.6rem;
     top: -.2rem;
@@ -326,7 +320,7 @@ body {
 }
 
 .contact-pop .cp-btn .cpb-call {
-    color: #31c27c;
+    color: #FF9900;
 }
 
 #layer {
@@ -416,6 +410,7 @@ body {
     display: none;
 }
 
+
 /*地区选择*/
 
 .jlb-filter .area_sp {
@@ -456,7 +451,7 @@ body {
 }
 
 #area_sp div ul .area-on {
-    color: #31c27c;
+    color: #FF9900;
     background-color: #fff;
 }
 
@@ -468,6 +463,7 @@ body {
 #area_sp .city ul li {
     border-bottom: 1px solid #F0F0F0;
 }
+
 
 /*薪资*/
 
@@ -500,9 +496,10 @@ body {
 }
 
 .price_tab ul li.active {
-    border-bottom: 3px solid #31c27c;
+    border-bottom: 3px solid #31C27C;
     margin-bottom: -2px;
 }
+
 
 /*更多*/
 
@@ -533,8 +530,8 @@ body {
 }
 
 .more_list ul li.mf-on {
-    color: #31c27c;
-    border-color: #31c27c;
+    color: #31C27C;
+    border-color: #31C27C;
 }
 
 #more {
@@ -565,9 +562,10 @@ body {
 }
 
 .button_box a.confirm {
-    border: 1px solid #31c27c;
-    color: #31c27c;
+    border: 1px solid #31C27C;
+    color: #31C27C;
 }
+
 
 /*分享*/
 
@@ -615,5 +613,5 @@ footer .job {
     background-image: url(../img/job2.png);
     background-size: auto 2.2rem;
     background-position: center 0.2rem;
-    color: #31c27c;
+    color: #31C27C;
 }

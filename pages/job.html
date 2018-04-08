@@ -192,6 +192,7 @@
   </div>
 </li> -->
     </ul>
+    <div id="loading" style="margin: 10px 0 0;text-align: center;color: #666;">加载中...</div>
   </div>
   <footer>
     <a class="school">在线学堂</a>
@@ -212,10 +213,9 @@
         window.location.href = href
       }, s);
     }
-
-    function RetainedDecimalPlacesNF(num) {　　
-      var source = String(num).split(".");　　
-      source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{3})+$)', 'ig'), "$1,");　　
+    function RetainedDecimalPlacesNF(num) {
+      var source = String(num).split(".");
+      source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{3})+$)', 'ig'), "$1,");
       return source[0];
     };
     var urlpath = "";
@@ -230,7 +230,19 @@
     shareWechat.sharePage(urlpath);
     var wx_openid = localStorage.getItem('wx-openid');
 
-    var isLogin;
+    var isLogin,
+      privince = "",
+      city = "",
+      serviceType = "",
+      age = "",
+      salaryType = "",
+      salary = "",
+      pageIndex = 1,
+      pageSize = 10,
+      maxNumber = 0,
+      pending = false,
+      noMore = false;
+
 
     function initUserInfo() {
       $.ajax({
@@ -255,49 +267,32 @@
       });
     }
     //获取总条数
-    function records(serviceType, privince, city, age, salaryType, salary) {
-      $.ajax({
-        url: window.global_config.job,
-        type: "get",
-        data: {
-          serviceType: serviceType,
-          privince: privince,
-          city: city,
-          age: age,
-          salaryType: salaryType,
-          salary: salary,
-          showMore: "02"
-          // serviceCity: serviceCity,
-          // age: age
-        },
-        dataType: "json",
-        async: false,
-        success: function success(data) {
-          if (data.success) {
-            if (data.code == 0) {
-              var dataJD = data.jsonData.rows;
-              // var records = dataJD.jsonData.records;
-              var records = 1000;
-              getTenantsJobsListInfo("1", records, serviceType, privince, city, age, salaryType, salary);
-              console.log(data.msg);
-            } else {
-              checkAuth(data.code);
-            }
-          } else {
-            console.log(data.msg);
-          }
-        }
-      });
-
+    function records(isloadmore) {
+      if (pending) {
+        return;
+      }
+      if (!isloadmore) {
+        noMore = false;
+        pageIndex = 1;
+      }
+      //没有更多数据
+      if (noMore) {
+        $('#loading').html('没有更多数据');
+        return;
+      } else {
+        $('#loading').html('加载中...');
+      }
+      getTenantsJobsListInfo(isloadmore);
     }
 
-    function getTenantsJobsListInfo(pageNumber, pageSize, serviceType, privince, city, age, salaryType, salary) {
+    function getTenantsJobsListInfo(isloadmore) {
+      pending = true;
       $.ajax({
         url: window.global_config.job,
         type: "get",
         async: false,
         data: {
-          pageNumber: pageNumber,
+          pageNumber: pageIndex,
           pageSize: pageSize,
           serviceType: serviceType,
           privince: privince,
@@ -306,11 +301,21 @@
           salaryType: salaryType,
           salary: salary,
           showMore: "02"
-          // serviceCity: serviceCity,
-          // age: age
         },
         dataType: "json",
         success: function success(data) {
+          maxNumber = data.jsonData.records;
+          if (pageSize * pageIndex >= maxNumber) {
+            noMore = true;
+            $('#loading').html('没有更多数据');
+          } else {
+            pageIndex++;
+          }
+          if (data.jsonData.rows == "" && pageIndex == 1) {
+            $('#loading').hide();
+          } else {
+            $('#loading').show();
+          }
           if (data.success) {
             if (data.code == 0) {
               var dataJD = data.jsonData.rows;
@@ -324,26 +329,6 @@
                   if (item.emsSign == "01") {
                     emsSign = "<i>急</i>";
                   }
-                  // var age = "";
-                  // var ageMin = item.age.split("-")[0];
-                  // var ageMax = item.age.split("-")[1];
-                  // if (ageMin == "") {
-                  //   age = ageMax;
-                  // } else if (ageMax == "") {
-                  //   age = ageMin;
-                  // } else {
-                  //   age = item.age;
-                  // }
-                  // var salary = "";
-                  // var salaryMin = item.salary.split("-")[0];
-                  // var salaryMax = item.salary.split("-")[1];
-                  // if (salaryMin == "") {
-                  //   salary = salaryMax;
-                  // } else if (salaryMax == "") {
-                  //   salary = salaryMin;
-                  // } else {
-                  //   salary = item.salary;
-                  // }
                   var address = "";
                   if (item.area == "") {
                     if (item.city != "") {
@@ -359,8 +344,7 @@
                     salary = RetainedDecimalPlacesNF(item.salary);
                   }
                   html += "<li>" +
-                    "<h2><a>" + item.positionName + "</a>" + emsSign + "<span class='price'>" + salary + item
-                    .salaryTypeValue + "</span></h2>" +
+                    "<h2><a>" + item.positionName + "</a>" + emsSign + "<span class='price'>" + salary + item.salaryTypeValue + "</span></h2>" +
                     "<h3>" +
                     "<span class='age'>" + item.age + "</span>" +
                     "<span class='location'>" + address + "</span>" +
@@ -374,18 +358,27 @@
                     "</li>";
                 });
               }
-              $(".job_list").html(html);
+              if (isloadmore) {
+                $(".job_list").append(html);
+              } else {
+                $(".job_list").html(html);
+              }
               console.log(data.msg);
             } else {
+              checkAuth(data.code);
               console.log(data.msg);
             }
           } else {
             checkAuth(data.code);
             console.log(data.msg);
           }
+        },
+        complete: function () {
+          pending = false;
         }
       });
-    };
+    }
+    ;
     //			区域选择
     function serviceProviceSp() {
       $.ajax({
@@ -458,8 +451,7 @@
               proObj = data.jsonData;
               var html = "<p data-sercode=''>全部<img src='../img/check.png' /></p>";
               $.each(proObj, function (i, item) {
-                html += "<p data-sercode='" + item.code + "'>" + item.serviceType +
-                  "<img src='../img/check.png' /></p>";
+                html += "<p data-sercode='" + item.code + "'>" + item.serviceType + "<img src='../img/check.png' /></p>";
               });
               $("#sortService").html(html);
             }
@@ -521,8 +513,7 @@
               var dataPrie = item.ceList;
               var html0 = "<p data-sercode=''>全部<img src='../img/check.png' /></p>";
               $.each(dataPrie, function (j, item0) {
-                html0 += "<p data-sercode='" + item0.id + "'>" + item0.value +
-                  "<img src='../img/check.png' /></p>";
+                html0 += "<p data-sercode='" + item0.id + "'>" + item0.value + "<img src='../img/check.png' /></p>";
               })
               $(".price_content").eq(i).html(html0);
             });
@@ -547,6 +538,7 @@
       var bodyHeight = $("body").outerHeight(true);
       var companyMinHeight = windowHeight - ttHeight;
       $(".job_list_box").css("minHeight", companyMinHeight);
+      var $body = $("body");
       $(window).scroll(function () {
         if ($("body").scrollTop() < fixHeight) {
           $(".jlb-filter").removeClass("jlb-filter_fix");
@@ -556,11 +548,14 @@
           $(".jlb-filter").addClass("jlb-filter_fix");
           $(".Service_type").addClass("Service_type_fix");
           // $(".job_list_box").css("minHeight",companyMinHeight);
-        };
+        }
+        if ((document.body.clientHeight - $body.scrollTop() - window.screen.height) <= 5) {
+          records(true)
+        }
       });
 
       //获取所有数据
-      records("", "", "", "", "", "");
+      records();
 
       //				地区选择
       $("#area_sp").on("click", "li", function () {
@@ -580,23 +575,23 @@
             $("#jlb-layer").hide();
             $(".sortType").children("img").attr("src", "../img/down.png");
             $(".sortType span").eq("2").text("区域");
-            var privince = "";
-            var city = "";
-            var age = "";
+            privince = "";
+            city = "";
+            age = "";
             if ($("#sortAge ul li.mf-on").length > 0) {
               age = $("#sortAge ul li.mf-on").data("age");
             }
-            var serviceType = "";
+            serviceType = "";
             if ($("#sortService p.mf-on").length > 0) {
               serviceType = $("#sortService p.mf-on").data("sercode");
             }
-            var salaryType = "";
-            var salary = "";
+            salaryType = "";
+            salary = "";
             if ($(".price_content p.mf-on").length > 0) {
               salary = $(".price_content p.mf-on").data("sercode");
               salaryType = $("#salaryType li.active").data("sercode");
             }
-            records(serviceType, privince, city, age, salaryType, salary);
+            records();
           }
 
         } else if ($(this).parents("div").hasClass("city")) {
@@ -612,23 +607,23 @@
             $(".sortType span").eq("2").text($("#area_sp .city .area-on").text());
           }
 
-          var privince = $("input[name='serviceProvice']").val();
-          var city = $("input[name='serviceCity']").val();
-          var age = "";
+          privince = $("input[name='serviceProvice']").val();
+          city = $("input[name='serviceCity']").val();
+          age = "";
           if ($("#sortAge ul li.mf-on").length > 0) {
             age = $("#sortAge ul li.mf-on").data("age");
           }
-          var serviceType = "";
+          serviceType = "";
           if ($("#sortService p.mf-on").length > 0) {
             serviceType = $("#sortService p.mf-on").data("sercode");
           }
-          var salaryType = "";
-          var salary = "";
+          salaryType = "";
+          salary = "";
           if ($(".price_content p.mf-on").length > 0) {
             salary = $(".price_content p.mf-on").data("sercode");
             salaryType = $("#salaryType li.active").data("sercode");
           }
-          records(serviceType, privince, city, age, salaryType, salary);
+          records();
 
         }
       });
@@ -678,7 +673,7 @@
         } else {
           $(".sortCondition").slideUp();
           $("#jlb-layer").show();
-          $(this).children("span").css("color", "#31c27c");
+          $(this).children("span").css("color", "#FF9900");
           $(this).siblings().children("span").css("color", "#333");
           $(this).children("img").attr("src", "../img/up.png");
           $(this).siblings().children("img").attr("src", "../img/down.png");
@@ -725,7 +720,7 @@
           var index0 = $price_content.index($(this).parent())
           $(".sortType span").eq(index).text($("#salaryType li").eq(index0).text());
         } else {
-          // $(".sortType span").eq(index).css("color","#31c27c");
+          // $(".sortType span").eq(index).css("color","#FF9900");
           $(".sortType span").eq(index).text($(this).text());
         }
         if (index == "1") {
@@ -735,27 +730,27 @@
           $(this).siblings("p").css("color", "#333333").children("img").hide();
         }
         // $(this).siblings("p").css("color", "#333333").children("img").hide();
-        $(this).css("color", "#31c27c").children("img").show();
+        $(this).css("color", "#FF9900").children("img").show();
         $(this).addClass("mf-on");
         $(this).siblings("p").removeClass("mf-on");
         // var serviceType = $("#sortService p.mf-on").data("sercode");
-        var privince = $("input[name='serviceProvice']").val();
-        var city = $("input[name='serviceCity']").val();
-        var age = "";
+        privince = $("input[name='serviceProvice']").val();
+        city = $("input[name='serviceCity']").val();
+        age = "";
         if ($("#sortAge ul li.mf-on").length > 0) {
           age = $("#sortAge ul li.mf-on").data("age");
         }
-        var serviceType = "";
+        serviceType = "";
         if ($("#sortService p.mf-on").length > 0) {
           serviceType = $("#sortService p.mf-on").data("sercode");
         }
-        var salaryType = "";
-        var salary = "";
+        salaryType = "";
+        salary = "";
         if ($(".price_content p.mf-on").length > 0) {
           salary = $(".price_content p.mf-on").data("sercode");
           salaryType = $("#salaryType li.active").data("sercode");
         }
-        records(serviceType, privince, city, age, salaryType, salary);
+        records();
         $(".sortCondition").slideUp();
         $(".sortType").children("img").attr("src", "../img/down.png");
         $(".sortType span").css("color", "#333333");
@@ -787,24 +782,24 @@
       // 确认筛选
       $(".button_box").on("click", ".confirm", function () {
         // var serviceType = $("#sortService p.mf-on").data("sercode");
-        var privince = $("input[name='serviceProvice']").val();
-        var city = $("input[name='serviceCity']").val();
-        var age = "";
+        privince = $("input[name='serviceProvice']").val();
+        city = $("input[name='serviceCity']").val();
+        age = "";
         if ($("#sortAge ul li.mf-on").length > 0) {
           age = $("#sortAge ul li.mf-on").data("age");
         }
-        var serviceType = "";
+        serviceType = "";
         if ($("#sortService p.mf-on").length > 0) {
           serviceType = $("#sortService p.mf-on").data("sercode");
         }
-        var salaryType = "";
-        var salary = "";
+        salaryType = "";
+        salary = "";
         if ($(".price_content p.mf-on").length > 0) {
           salary = $(".price_content p.mf-on").data("sercode");
           salaryType = $("#salaryType li.active").data("sercode");
         }
         $(".sortType span").css("color", "#333");
-        records(serviceType, privince, city, age, salaryType, salary);
+        records();
         $(".sortCondition").slideUp();
         $(".sortType").children("img").attr("src", "../img/down.png");
         $("#jlb-layer").hide();
@@ -821,14 +816,14 @@
         $(".sortType span").eq(0).text("工种");
         $(".sortType span").eq(1).text("薪资");
         $(".sortType span").eq(2).text("区域");
-        var serviceType = "";
-        var privince = "";
-        var city = "";
-        var age = "",
+        serviceType = "",
+          privince = "",
+          city = "",
+          age = "",
           salaryType = "",
           salary = "";
 
-        records(serviceType, privince, city, age, salaryType, salary);
+        records();
         $(".sortCondition").slideUp();
         $(".sortType").children("img").attr("src", "../img/down.png");
         $("#jlb-layer").hide();
@@ -869,8 +864,7 @@
         $(this).addClass("active").siblings().removeClass("active");
         var index = $div_li.index(this);
         $(".price_content_box .price_content").eq(index).show().siblings().hide();
-        $(".price_content_box .price_content").eq(index).siblings().children("p").removeClass("mf-on").css(
-          "color", "#333333").children("img").hide();
+        $(".price_content_box .price_content").eq(index).siblings().children("p").removeClass("mf-on").css("color", "#333333").children("img").hide();
         if ($(".price_content p.mf-on").length < 1) {
           $(".sortType span").eq("1").text("薪资");
         }

@@ -82,7 +82,7 @@
 </header>
 <section>
   <div class="tips"></div>
-  <p class="tipTxt">模拟考试，必须在90分钟完成 </p>
+  <p class="tipTxt" id="tipcon">模拟考试，必须在90分钟完成 </p>
   <p class="tipTxt">答题并交卷，中途不得暂停。</p>
   <p class="tipSm">准备好了吗？加油咯！</p>
   <div class="btnBox">
@@ -116,11 +116,15 @@
   shareWechat.sharePage(urlpath);
   var courseId = location.href.split('?')[1].split('&')[0].split('=')[1];
   var courseName = decodeURI(location.href.split('?')[1].split('&')[1].split('=')[1]);
+  if(courseId==7){
+  $("#tipcon").html("模拟考试，必须在45分钟完成");
+  }
   $('.beginBtn').click(function () {
       window.location.href = '/pages/questions.html?courseId=' + courseId + '&' + 'courseName=' + courseName;
   })
   $(".title").text(courseName);
   console.log(courseId);
   sessionStorage.setItem('courseName', courseName);
+  
 </script>
 </html>

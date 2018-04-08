@@ -44,9 +44,9 @@ function recommend() {
   };
   var wx_openid = localStorage.getItem('wx-openid');
   $.ajax({
-    url: window.global_config.college_courselist,
-    type: "get",
-    data: params,
+    url: window.global_config.recommend + "?schoolId=" + schoolId,
+    type: "post",
+    data: {},
     dataType: "json",
     headers: {
       "wx-openid": wx_openid
@@ -57,7 +57,7 @@ function recommend() {
           $(".content").html(initNothing());
         } else {
           $(".content").html(initRecommend());
-          initRecommendList("recommendC", data.jsonData.rows);
+          initRecommendList("recommendC", data.jsonData);
         }
       } else {
         $.toast(data.msg);
@@ -159,7 +159,7 @@ function initRecommendList(em, data) {
       <li class="study_list">
         <div class="study_list_pannel">
           <div class="title-warp">
-            <h2>${item.packageName}</h2>
+            <h2>${item.productName}</h2>
             <span>
               <img src="../img/online.png">${item.orderNum}
             </span>

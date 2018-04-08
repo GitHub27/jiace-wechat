@@ -1,15 +1,12 @@
-body {
+body{
     padding-bottom: 5rem;
 }
-
-.left {
+.left{
     float: left;
 }
-
 .right {
     float: right;
 }
-
 span#share {
     position: absolute;
     padding: 0 1.5rem;
@@ -20,7 +17,7 @@ span#share {
     background-size: 1.7rem auto;
     background-position: center .6rem;
     font-size: 1rem;
-    color: #31c27c;
+    color: #31C27C;
 }
 
 header {
@@ -57,8 +54,7 @@ header {
     font-size: 1.3rem;
     position: relative;
 }
-
-.grapHeader .headBottom li:not(:last-child):after {
+.grapHeader .headBottom li:not(:last-child):after{
     position: absolute;
     right: 0;
     top: 1rem;
@@ -67,7 +63,6 @@ header {
     height: 2.4rem;
     background: #ffcbb0;
 }
-
 .grapHeader .headBottom li p {
     margin-bottom: .7rem;
 }
@@ -124,7 +119,6 @@ p.paragraph {
     padding-left: 7.5rem;
     display: block;
 }
-
 .footer {
     border-top: 1px solid #d7d7d7;
     height: 4.9rem;
@@ -138,14 +132,12 @@ p.paragraph {
     bottom: 0;
     right: 0;
 }
-
 .mendian {
     padding-right: 10.5rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
 .mobile {
     position: absolute;
     right: 1.5rem;
@@ -160,7 +152,7 @@ a.mobileBtn {
     display: inline-block;
     font-size: 1.5rem;
     text-align: center;
-    background: #31c27c;
+    background: #31C27C;
     color: #fff;
     padding: 0 1.3rem;
 }
@@ -172,31 +164,29 @@ a.mobileBtn span {
     background-size: 1.3rem auto;
     background-position: left center;
 }
-
 .shareRedPacket-pop {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 200;
-    display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 200;
+   display: none; 
 }
-
 .shareRedPacket-pop .shareArrow {
-    position: absolute;
-    right: 1rem;
-    padding-top: 7rem;
-    background: url(../img/shareArrow.png) no-repeat;
-    background-size: 4.7rem 5.55rem;
-    background-position: 1.4rem 1rem;
-    font-size: 1.5rem;
-    color: #FFFFFF;
+  position: absolute;
+  right: 1rem;
+  padding-top: 7rem;
+  background: url(../img/shareArrow.png) no-repeat;
+  background-size: 4.7rem 5.55rem;
+  background-position: 1.4rem 1rem;
+  font-size: 1.5rem;
+  color: #FFFFFF;
 }
 
 .activityRules {
-    margin-top: 13rem;
+    margin-top:  13rem;
     color: #fff;
 }
 
